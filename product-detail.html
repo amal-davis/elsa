@@ -1,0 +1,699 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chicken Curry Masala 250g — Elsa, Heaven Valley Industries</title>
+  <meta name="description" content="Buy Elsa Chicken Curry Masala 250g — a robust, stone-ground blend of black pepper and curry leaf. ISO-certified, no preservatives, Kerala-sourced.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container-xl">
+      <div class="site-header__bar">
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+        </a>
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0">
+          <button type="button" class="icon-btn" id="searchToggle" aria-haspopup="true" aria-expanded="false" aria-controls="searchPanel" aria-label="Search products">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <div class="account-menu" id="accountMenu">
+            <button type="button" class="icon-btn" id="accountMenuTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="accountMenuPanel" aria-label="Account menu">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+            <div class="account-menu__panel" id="accountMenuPanel" role="menu" aria-label="Account">
+              <a href="#" role="menuitem">My Account</a>
+              <a href="order-tracking.html" role="menuitem">Track Order</a>
+              <a href="login.html" role="menuitem">Sign In</a>
+            </div>
+          </div>
+          <a class="icon-btn" href="cart.html" aria-label="Cart, 3 items">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span class="cart-badge" id="cartBadge">3</span>
+          </a>
+          <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Open menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <div class="container-xl">
+          <form class="header-search" role="search" action="#" method="get">
+            <label class="visually-hidden" for="site-search">Search products</label>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="search" id="site-search" name="q" placeholder="Search curry powders, spices, tea…">
+            <button type="button" class="icon-btn search-panel__close" id="searchClose" aria-label="Close search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile" aria-hidden="true">
+    <div class="mobile-drawer__head">
+      <span class="brand"><img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48"></span>
+      <button type="button" class="icon-btn" id="drawerClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Browse</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Account</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="#">My Account</a></li>
+        <li><a href="order-tracking.html">Track Order</a></li>
+        <li><a href="login.html">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section" style="border-bottom:none;">
+      <p class="mobile-drawer__label">Shopping</p>
+      <ul class="mobile-drawer__list">
+        <li>
+          <a href="cart.html">
+            <span class="d-flex align-items-center justify-content-between w-100">
+              <span>Your Cart</span>
+              <span class="cart-badge" style="position:static;">3</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- BREADCRUMB -->
+    <div class="page-banner page-banner--slim">
+      <div class="container-xl">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chicken Curry Masala</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- PRODUCT SECTION -->
+    <section class="section" aria-label="Product detail">
+      <div class="container-xl">
+        <div class="row g-4 g-lg-5">
+
+          <!-- LEFT: Gallery -->
+          <div class="col-12 col-lg-6">
+            <div class="pdp-gallery">
+
+              <!-- Thumbnails: left column on desktop, horizontal strip below on mobile -->
+              <div class="pdp-gallery__thumbs" id="pdpThumbs" role="group" aria-label="Product image thumbnails">
+                <button class="pdp-thumb is-active"
+                        data-src="assets/images/products1.jpeg"
+                        data-alt="Elsa Chicken Curry Masala — front view"
+                        aria-label="View image 1" aria-pressed="true">
+                  <img src="assets/images/products1.jpeg" alt="" loading="eager">
+                </button>
+                <button class="pdp-thumb"
+                        data-src="assets/images/products2.jpg"
+                        data-alt="Elsa Chicken Curry Masala — ingredients view"
+                        aria-label="View image 2" aria-pressed="false">
+                  <img src="assets/images/products2.jpg" alt="" loading="lazy">
+                </button>
+                <button class="pdp-thumb"
+                        data-src="assets/images/products3.jpg"
+                        data-alt="Elsa Chicken Curry Masala — lifestyle shot"
+                        aria-label="View image 3" aria-pressed="false">
+                  <img src="assets/images/products3.jpg" alt="" loading="lazy">
+                </button>
+              </div>
+
+              <!-- Main image -->
+              <div class="pdp-gallery__main">
+                <div class="pdp-gallery__badge-row">
+                  <span class="pdp-gallery__badge">25% OFF</span>
+                  <span class="pdp-gallery__badge pdp-gallery__badge--green">In Stock</span>
+                </div>
+                <div class="pdp-gallery__main-wrap" id="pdpMainWrap">
+                  <img class="pdp-gallery__main-img" id="pdpMainImg"
+                       src="assets/images/products1.jpeg"
+                       alt="Elsa Chicken Curry Masala 250g pack"
+                       width="600" height="600">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT: Product Info -->
+          <div class="col-12 col-lg-6">
+            <div class="pdp-info">
+
+              <p class="pdp-category-link">
+                <a href="products.html">Curry Powders</a>
+              </p>
+
+              <h1 class="pdp-title">Elsa Chicken Curry Masala</h1>
+
+              <!-- Rating row -->
+              <div class="pdp-rating-row">
+                <div class="star-rating" aria-label="4.5 out of 5 stars">
+                  <span class="star-rating__stars">
+                    <span class="star-rating__fill" style="--pct:90%">★★★★★</span>
+                    <span class="star-rating__empty" aria-hidden="true">★★★★★</span>
+                  </span>
+                </div>
+                <a href="#tab-reviews" class="pdp-rating-count" id="pdpJumpReviews">128 reviews</a>
+                <span class="pdp-rating-sep" aria-hidden="true">·</span>
+                <span class="pdp-rating-sold">340+ sold</span>
+              </div>
+
+              <!-- Price -->
+              <div class="pdp-price-block">
+                <span class="pdp-price" id="pdpPrice">₹150</span>
+                <span class="pdp-price-mrp" id="pdpMrp">₹199</span>
+                <span class="pdp-discount-badge" id="pdpBadge">25% OFF</span>
+              </div>
+              <p class="pdp-tax-note">Inclusive of all taxes &nbsp;·&nbsp; Free shipping above ₹499</p>
+
+              <!-- Short desc -->
+              <p class="pdp-short-desc">A robust, well-rounded blend built for everyday chicken curry — black pepper and curry leaf carry the base, with just enough heat to wake up a weeknight dinner. Stone-ground in small batches from Kerala-sourced spices.</p>
+
+              <hr class="pdp-divider">
+
+              <!-- Weight selector -->
+              <div class="pdp-option-group">
+                <p class="pdp-option-label">Weight</p>
+                <div class="pdp-weight-options" role="group" aria-label="Select weight">
+                  <button class="pdp-weight-btn" data-price="110" data-mrp="149" data-weight="100 g" aria-pressed="false">100 g</button>
+                  <button class="pdp-weight-btn is-active" data-price="150" data-mrp="199" data-weight="250 g" aria-pressed="true">250 g</button>
+                  <button class="pdp-weight-btn" data-price="280" data-mrp="379" data-weight="500 g" aria-pressed="false">500 g</button>
+                </div>
+              </div>
+
+              <!-- Quantity + Add to Cart -->
+              <div class="pdp-purchase-row">
+                <div class="qty-selector" role="group" aria-label="Quantity">
+                  <button type="button" class="qty-btn" id="qtyDec" aria-label="Decrease quantity">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </button>
+                  <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="99" aria-label="Quantity" readonly>
+                  <button type="button" class="qty-btn" id="qtyInc" aria-label="Increase quantity">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </button>
+                </div>
+                <button type="button" class="btn btn-accent btn-add pdp-add-btn" id="pdpAddToCart" data-product="Chicken Curry Masala">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  <span class="btn-add__label">Add to Cart</span>
+                </button>
+              </div>
+
+              <!-- Buy Now -->
+              <button type="button" class="btn btn-ghost w-100 pdp-buy-btn" id="pdpBuyNow">
+                Buy Now
+              </button>
+
+              <!-- Stock status -->
+              <div class="pdp-stock pdp-stock--in">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>In Stock — ships in 1–2 business days</span>
+              </div>
+
+              <hr class="pdp-divider">
+
+              <!-- Highlights -->
+              <ul class="pdp-highlights" aria-label="Product highlights">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                  <span>ISO 22000:2018 certified manufacturing</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="6.5" y1="6.5" x2="17.5" y2="17.5"></line></svg>
+                  <span>Zero preservatives or artificial colours</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+                  <span>Kerala-sourced, stone-ground spices</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="9" rx="1.5"></rect><path d="M7 11V8a5 5 0 0 1 10 0v3"></path></svg>
+                  <span>Hygienically packed in tamper-proof pouches</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>
+                  <span>18-month shelf life from manufacture date</span>
+                </li>
+              </ul>
+
+              <hr class="pdp-divider">
+
+              <!-- Meta -->
+              <dl class="pdp-meta">
+                <div class="pdp-meta-row">
+                  <dt>SKU</dt>
+                  <dd>ELSA-CCM-250</dd>
+                </div>
+                <div class="pdp-meta-row">
+                  <dt>Category</dt>
+                  <dd><a href="products.html">Curry Powders</a></dd>
+                </div>
+                <div class="pdp-meta-row">
+                  <dt>Weight</dt>
+                  <dd id="pdpMetaWeight">250 g</dd>
+                </div>
+              </dl>
+
+              <!-- Share -->
+              <div class="pdp-share">
+                <span class="pdp-share-label">Share</span>
+                <div class="pdp-share-icons">
+                  <a href="https://wa.me/?text=Check%20out%20Elsa%20Chicken%20Curry%20Masala" class="pdp-share-btn" aria-label="Share on WhatsApp" target="_blank" rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                  </a>
+                  <a href="#" class="pdp-share-btn" aria-label="Share on Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                  </a>
+                  <a href="#" class="pdp-share-btn" aria-label="Share on X (Twitter)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835-8.162-10.665H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  </a>
+                  <button type="button" class="pdp-share-btn" id="pdpCopyLink" aria-label="Copy product link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS SECTION -->
+    <section class="section section--surface" id="pdpTabsSection">
+      <div class="container-xl">
+        <div class="pdp-tabs">
+
+          <div class="pdp-tabs__nav" role="tablist" aria-label="Product information">
+            <button class="pdp-tab-btn is-active" role="tab" id="tbtn-description"
+                    aria-selected="true" aria-controls="tab-description" data-tab="description">
+              Description
+            </button>
+            <button class="pdp-tab-btn" role="tab" id="tbtn-specifications"
+                    aria-selected="false" aria-controls="tab-specifications" data-tab="specifications">
+              Specifications
+            </button>
+            <button class="pdp-tab-btn" role="tab" id="tbtn-reviews"
+                    aria-selected="false" aria-controls="tab-reviews" data-tab="reviews">
+              Reviews <span class="pdp-tab-count">(128)</span>
+            </button>
+          </div>
+
+          <!-- Description -->
+          <div class="pdp-tab-panel is-active" id="tab-description" role="tabpanel" aria-labelledby="tbtn-description" tabindex="0">
+            <div class="pdp-description">
+              <h2 class="pdp-tab-heading">About Elsa Chicken Curry Masala</h2>
+              <p>Elsa Chicken Curry Masala is born from thirty-one years of getting one dish right. It starts with hand-picked Kerala peppercorns and whole curry leaves, dried slowly so none of the volatile oils escape, then stone-ground alongside a carefully balanced roster of coriander, turmeric, red chilli, cumin and cardamom.</p>
+              <p>Most commercial masalas are built around colour and shelf life. Ours is built around the moment you lift the lid. The aroma that fills the kitchen when the masala hits the hot oil is the smell of slow-dried whole spices, not spray-dried extract powder. That distinction is audible, visible and unmistakeable on the tongue.</p>
+
+              <h3 class="pdp-tab-subheading">How to use</h3>
+              <ol class="pdp-steps">
+                <li>Heat oil in a heavy pan. Add sliced onions and cook until golden.</li>
+                <li>Add ginger-garlic paste and sauté for two minutes.</li>
+                <li>Add 1½ tsp of Elsa Chicken Curry Masala per 500 g of chicken.</li>
+                <li>Stir for 30 seconds over medium heat until fragrant.</li>
+                <li>Add tomatoes, cook down, then add the chicken and cook through.</li>
+                <li>Finish with a sprig of fresh curry leaf and a squeeze of lime.</li>
+              </ol>
+
+              <h3 class="pdp-tab-subheading">Ingredients</h3>
+              <p class="pdp-ingredients">Coriander (34%), Red Chilli (18%), Black Pepper (12%), Turmeric (10%), Cumin (8%), Fennel (6%), Cardamom (4%), Curry Leaf Powder (4%), Cinnamon (2%), Cloves (1%), Bay Leaf (1%). <strong>No added salt. No MSG. No preservatives. No artificial colour.</strong></p>
+
+              <div class="pdp-callout">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                <div>
+                  <strong>ISO 22000:2018 Certified</strong>
+                  <p>Every batch is tested for microbiological safety, moisture content and colour consistency before it leaves our facility in Muttom, Kerala.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specifications -->
+          <div class="pdp-tab-panel" id="tab-specifications" role="tabpanel" aria-labelledby="tbtn-specifications" tabindex="0">
+            <div class="pdp-specs">
+              <h2 class="pdp-tab-heading">Product Specifications</h2>
+              <div class="specs-table-wrap">
+                <table class="specs-table">
+                  <caption class="visually-hidden">Elsa Chicken Curry Masala specifications</caption>
+                  <tbody>
+                    <tr><th scope="row">Brand</th><td>Elsa — Heaven Valley Industries</td></tr>
+                    <tr><th scope="row">Product</th><td>Chicken Curry Masala</td></tr>
+                    <tr><th scope="row">Net Weight</th><td>250 g</td></tr>
+                    <tr><th scope="row">SKU</th><td>ELSA-CCM-250</td></tr>
+                    <tr><th scope="row">Form</th><td>Powder (stone-ground)</td></tr>
+                    <tr><th scope="row">Colour</th><td>Deep reddish-brown</td></tr>
+                    <tr><th scope="row">Shelf Life</th><td>18 months from manufacture date</td></tr>
+                    <tr><th scope="row">Storage</th><td>Store in a cool, dry place. Refrigerate after opening.</td></tr>
+                    <tr><th scope="row">Packaging</th><td>Food-grade resealable pouch</td></tr>
+                    <tr><th scope="row">Preservatives</th><td>None</td></tr>
+                    <tr><th scope="row">Allergens</th><td>Manufactured in a facility handling tree nuts and sesame</td></tr>
+                    <tr><th scope="row">Certifications</th><td>ISO 22000:2018 · FSSAI</td></tr>
+                    <tr><th scope="row">Country of Origin</th><td>India (Kerala)</td></tr>
+                    <tr><th scope="row">Manufacturer</th><td>Heaven Valley Industries, Humpamon, Pathanamthitta, Kerala 689502</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 class="pdp-tab-subheading" style="margin-top:2.5rem;">Nutritional Information</h3>
+              <p style="color:var(--color-ink-soft);font-size:var(--text-small);margin-bottom:1rem;">Approximate values per 100 g</p>
+              <div class="specs-table-wrap">
+                <table class="specs-table specs-table--striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nutrient</th>
+                      <th scope="col">Per 100 g</th>
+                      <th scope="col">Per serving (5 g)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Energy</td><td>310 kcal</td><td>15.5 kcal</td></tr>
+                    <tr><td>Protein</td><td>12.4 g</td><td>0.6 g</td></tr>
+                    <tr><td>Total Fat</td><td>8.6 g</td><td>0.4 g</td></tr>
+                    <tr><td>Carbohydrates</td><td>48.2 g</td><td>2.4 g</td></tr>
+                    <tr><td>Dietary Fibre</td><td>22.1 g</td><td>1.1 g</td></tr>
+                    <tr><td>Sodium</td><td>28 mg</td><td>1.4 mg</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews -->
+          <div class="pdp-tab-panel" id="tab-reviews" role="tabpanel" aria-labelledby="tbtn-reviews" tabindex="0">
+            <div class="pdp-reviews">
+
+              <!-- Summary bar -->
+              <div class="pdp-reviews__summary">
+                <div class="pdp-reviews__score-block">
+                  <span class="pdp-reviews__big-number">4.5</span>
+                  <div class="star-rating star-rating--lg" aria-label="4.5 out of 5">
+                    <span class="star-rating__stars">
+                      <span class="star-rating__fill" style="--pct:90%">★★★★★</span>
+                      <span class="star-rating__empty" aria-hidden="true">★★★★★</span>
+                    </span>
+                  </div>
+                  <span class="pdp-reviews__base">Based on 128 reviews</span>
+                </div>
+                <div class="pdp-reviews__bars">
+                  <div class="review-bar-row"><span class="review-bar-label">5 ★</span><div class="review-bar"><div class="review-bar__fill" style="width:68%"></div></div><span class="review-bar-pct">68%</span></div>
+                  <div class="review-bar-row"><span class="review-bar-label">4 ★</span><div class="review-bar"><div class="review-bar__fill" style="width:18%"></div></div><span class="review-bar-pct">18%</span></div>
+                  <div class="review-bar-row"><span class="review-bar-label">3 ★</span><div class="review-bar"><div class="review-bar__fill" style="width:9%"></div></div><span class="review-bar-pct">9%</span></div>
+                  <div class="review-bar-row"><span class="review-bar-label">2 ★</span><div class="review-bar"><div class="review-bar__fill" style="width:3%"></div></div><span class="review-bar-pct">3%</span></div>
+                  <div class="review-bar-row"><span class="review-bar-label">1 ★</span><div class="review-bar"><div class="review-bar__fill" style="width:2%"></div></div><span class="review-bar-pct">2%</span></div>
+                </div>
+              </div>
+
+              <!-- Review list -->
+              <div class="pdp-reviews__list">
+
+                <article class="review-card">
+                  <header class="review-card__header">
+                    <div class="review-avatar" aria-hidden="true">P</div>
+                    <div class="review-card__meta">
+                      <span class="review-card__name">Priya Menon</span>
+                      <time class="review-card__date" datetime="2025-04-12">12 April 2025</time>
+                    </div>
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  </header>
+                  <h3 class="review-card__title">Best curry masala I've tried</h3>
+                  <p class="review-card__body">I've been buying from elsa for two years now and this is the one I reorder most. The aroma when it hits the oil is something else — you can tell these are real whole spices, not extract powder. My chicken curry hasn't been the same since.</p>
+                </article>
+
+                <article class="review-card">
+                  <header class="review-card__header">
+                    <div class="review-avatar" aria-hidden="true">R</div>
+                    <div class="review-card__meta">
+                      <span class="review-card__name">Rajan Pillai</span>
+                      <time class="review-card__date" datetime="2025-03-08">8 March 2025</time>
+                    </div>
+                    <div class="review-card__stars review-card__stars--4" aria-label="4 out of 5 stars">★★★★☆</div>
+                  </header>
+                  <h3 class="review-card__title">Authentic Kerala flavour</h3>
+                  <p class="review-card__body">Moved to Bangalore last year and this masala is the closest I've found to what my mother used to make back in Thrissur. Good heat level — not overwhelming, but enough to know it's real. Deducted one star because the pouch seal could be sturdier.</p>
+                </article>
+
+                <article class="review-card">
+                  <header class="review-card__header">
+                    <div class="review-avatar" aria-hidden="true">A</div>
+                    <div class="review-card__meta">
+                      <span class="review-card__name">Aisha Karim</span>
+                      <time class="review-card__date" datetime="2025-02-20">20 February 2025</time>
+                    </div>
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  </header>
+                  <h3 class="review-card__title">Worth every rupee</h3>
+                  <p class="review-card__body">Bought the 100 g pouch first to try. Ordered the 500 g the next week. The depth of flavour you get with just 1.5 tsp is remarkable — a little goes a long way. The freshness is very apparent when you open the pouch.</p>
+                </article>
+
+                <article class="review-card">
+                  <header class="review-card__header">
+                    <div class="review-avatar" aria-hidden="true">S</div>
+                    <div class="review-card__meta">
+                      <span class="review-card__name">Suresh Nambiar</span>
+                      <time class="review-card__date" datetime="2025-01-15">15 January 2025</time>
+                    </div>
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  </header>
+                  <h3 class="review-card__title">No artificial taste whatsoever</h3>
+                  <p class="review-card__body">I've been chasing a masala without MSG for years. This is it. Clean ingredients list, honest flavour, fast delivery. The stone-grinding makes a real difference — the powder has a texture you don't get from machine-milled blends.</p>
+                </article>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="section" aria-labelledby="related-heading">
+      <div class="container-xl">
+        <div class="d-flex align-items-baseline justify-content-between mb-4 flex-wrap gap-3">
+          <h2 class="section-heading mb-0" id="related-heading">You May Also Like</h2>
+          <a href="products.html" class="pdp-view-all">View all products</a>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4">
+
+          <div class="col">
+            <article class="product-card" data-category="curry-powders" data-price="110" data-availability="in-stock">
+              <div class="product-card__media">
+                <span class="media-placeholder" aria-hidden="true">Fish Curry Masala</span>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Curry Powder</p>
+                <h3 class="product-card__name">Fish Curry Masala</h3>
+                <p class="product-card__weight">100 g pouch</p>
+                <div class="product-card__rating" aria-label="4.4 out of 5 stars">
+                  <span class="star-rating star-rating--sm"><span class="star-rating__stars"><span class="star-rating__fill" style="--pct:88%">★★★★★</span><span class="star-rating__empty" aria-hidden="true">★★★★★</span></span></span>
+                  <span class="product-card__rating-count">(84)</span>
+                </div>
+                <p class="product-card__price">₹110</p>
+                <div class="product-card__actions">
+                  <button type="button" class="btn btn-accent btn-add" data-product="Fish Curry Masala"><span class="btn-add__label">Add to Cart</span></button>
+                  <button type="button" class="btn btn-quiet" data-quick-view data-name="Fish Curry Masala" data-weight="100 g pouch" data-price="₹110" data-desc="Tamarind-forward and coastal in character — the blend Kerala kitchens reach for when the catch of the day needs nothing more than a pot and patience." aria-label="View details: Fish Curry Masala">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="product-card" data-category="spice-powders" data-price="95" data-availability="in-stock">
+              <div class="product-card__media">
+                <span class="media-placeholder" aria-hidden="true">Turmeric Powder</span>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Spice Powder</p>
+                <h3 class="product-card__name">Turmeric Powder</h3>
+                <p class="product-card__weight">250 g pack</p>
+                <div class="product-card__rating" aria-label="4.7 out of 5 stars">
+                  <span class="star-rating star-rating--sm"><span class="star-rating__stars"><span class="star-rating__fill" style="--pct:94%">★★★★★</span><span class="star-rating__empty" aria-hidden="true">★★★★★</span></span></span>
+                  <span class="product-card__rating-count">(212)</span>
+                </div>
+                <p class="product-card__price">₹95</p>
+                <div class="product-card__actions">
+                  <button type="button" class="btn btn-accent btn-add" data-product="Turmeric Powder"><span class="btn-add__label">Add to Cart</span></button>
+                  <button type="button" class="btn btn-quiet" data-quick-view data-name="Turmeric Powder" data-weight="250 g pack" data-price="₹95" data-desc="Stone-ground from sun-dried Kerala turmeric — the deep golden colour and gentle bitterness that anchors a pot of dal or a glass of warm milk." aria-label="View details: Turmeric Powder">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="product-card" data-category="spice-powders" data-price="140" data-availability="in-stock">
+              <div class="product-card__media">
+                <span class="media-placeholder" aria-hidden="true">Black Pepper Powder</span>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Spice Powder</p>
+                <h3 class="product-card__name">Black Pepper Powder</h3>
+                <p class="product-card__weight">100 g pouch</p>
+                <div class="product-card__rating" aria-label="4.6 out of 5 stars">
+                  <span class="star-rating star-rating--sm"><span class="star-rating__stars"><span class="star-rating__fill" style="--pct:92%">★★★★★</span><span class="star-rating__empty" aria-hidden="true">★★★★★</span></span></span>
+                  <span class="product-card__rating-count">(97)</span>
+                </div>
+                <p class="product-card__price">₹140</p>
+                <div class="product-card__actions">
+                  <button type="button" class="btn btn-accent btn-add" data-product="Black Pepper Powder"><span class="btn-add__label">Add to Cart</span></button>
+                  <button type="button" class="btn btn-quiet" data-quick-view data-name="Black Pepper Powder" data-weight="100 g pouch" data-price="₹140" data-desc="Stone-ground from hand-picked Wayanad peppercorns — sharp, clean heat that holds its character even after the dish has cooled." aria-label="View details: Black Pepper Powder">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="product-card" data-category="spice-powders" data-price="165" data-availability="in-stock">
+              <div class="product-card__media">
+                <span class="media-placeholder" aria-hidden="true">Coriander Powder</span>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Spice Powder</p>
+                <h3 class="product-card__name">Coriander Powder</h3>
+                <p class="product-card__weight">500 g pack</p>
+                <div class="product-card__rating" aria-label="4.5 out of 5 stars">
+                  <span class="star-rating star-rating--sm"><span class="star-rating__stars"><span class="star-rating__fill" style="--pct:90%">★★★★★</span><span class="star-rating__empty" aria-hidden="true">★★★★★</span></span></span>
+                  <span class="product-card__rating-count">(63)</span>
+                </div>
+                <p class="product-card__price">₹165</p>
+                <div class="product-card__actions">
+                  <button type="button" class="btn btn-accent btn-add" data-product="Coriander Powder"><span class="btn-add__label">Add to Cart</span></button>
+                  <button type="button" class="btn btn-quiet" data-quick-view data-name="Coriander Powder" data-weight="500 g pack" data-price="₹165" data-desc="Roasted lightly before grinding to bring out its citrus-edged warmth — the spice most Kerala gravies start and finish with." aria-label="View details: Coriander Powder">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="container-xl py-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <span class="footer-brand">
+            <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+          </span>
+          <p class="mb-0" style="max-width:32ch;">Traditional spices, curry powders, tea and pantry essentials from Heaven Valley Industries — made the honest way since our founding, over thirty-one years ago.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Follow elsa on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" aria-label="Follow elsa on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" aria-label="Subscribe to elsa on YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.7 12 3.7 12 3.7s-6.6 0-8.4.6A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.6 8.4.6 8.4.6s6.6 0 8.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"></path><polygon points="9.8 15.5 15.8 12 9.8 8.5 9.8 15.5"></polygon></svg></a>
+          </div>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Main Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Product Categories</h2>
+          <ul class="footer-links">
+            <li><a href="products.html">Curry Powders</a></li>
+            <li><a href="products.html">Spice Powders</a></li>
+            <li><a href="products.html">Tea Powders</a></li>
+            <li><a href="products.html">Ready Mixes</a></li>
+            <li><a href="products.html">Ghee</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Contact</h2>
+          <ul class="footer-links">
+            <li>Heaven Valley Industries<br>Humpamon, Pathanamthitta<br>Kerala 689502, India</li>
+            <li><a href="tel:09539195111">09539195111</a></li>
+            <li><a href="mailto:heavenvalley14@gmail.com">heavenvalley14@gmail.com</a></li>
+            <li>Mon–Sat, 9 AM – 6 PM IST</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+        <span>© <span id="footerYear"></span> Heaven Valley Industries. All rights reserved.</span>
+        <span>ISO-Certified · Organic · Kerala-Sourced</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick view dialog -->
+  <dialog class="quick-view" id="quickViewDialog" aria-labelledby="quickViewTitle">
+    <button type="button" class="icon-btn quick-view__close" id="quickViewClose" aria-label="Close quick view">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="quick-view__body">
+      <div class="quick-view__media">
+        <span class="media-placeholder" id="quickViewMedia" aria-hidden="true"></span>
+      </div>
+      <div>
+        <h2 class="h4 mb-1" id="quickViewTitle"></h2>
+        <p class="product-card__weight" id="quickViewWeight"></p>
+        <p class="product-card__price" id="quickViewPrice"></p>
+        <p id="quickViewDesc"></p>
+        <button type="button" class="btn btn-accent btn-add" id="quickViewAdd">
+          <span class="btn-add__label">Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Copy link toast -->
+  <div class="pdp-toast" id="pdpToast" aria-live="polite" aria-atomic="true">Link copied to clipboard</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,676 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track Order — Elsa, Heaven Valley Industries</title>
+  <meta name="description" content="Track your Elsa orders, view order history, shipping updates and delivery status.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container-xl">
+      <div class="site-header__bar">
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+        </a>
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0">
+          <button type="button" class="icon-btn" id="searchToggle" aria-haspopup="true" aria-expanded="false" aria-controls="searchPanel" aria-label="Search products">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <div class="account-menu" id="accountMenu">
+            <button type="button" class="icon-btn" id="accountMenuTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="accountMenuPanel" aria-label="Account menu">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+            <div class="account-menu__panel" id="accountMenuPanel" role="menu" aria-label="Account">
+              <a href="#" role="menuitem">My Account</a>
+              <a href="order-tracking.html" role="menuitem">Track Order</a>
+              <a href="login.html" role="menuitem">Sign In</a>
+            </div>
+          </div>
+          <a class="icon-btn" href="cart.html" aria-label="Cart, 4 items">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span class="cart-badge" id="cartBadge">4</span>
+          </a>
+          <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Open menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <div class="container-xl">
+          <form class="header-search" role="search" action="#" method="get">
+            <label class="visually-hidden" for="site-search">Search products</label>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="search" id="site-search" name="q" placeholder="Search curry powders, spices, tea…">
+            <button type="button" class="icon-btn search-panel__close" id="searchClose" aria-label="Close search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile" aria-hidden="true">
+    <div class="mobile-drawer__head">
+      <span class="brand"><img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48"></span>
+      <button type="button" class="icon-btn" id="drawerClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Browse</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Account</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="#">My Account</a></li>
+        <li><a href="order-tracking.html">Track Order</a></li>
+        <li><a href="login.html">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section" style="border-bottom:none;">
+      <p class="mobile-drawer__label">Shopping</p>
+      <ul class="mobile-drawer__list">
+        <li>
+          <a href="cart.html">
+            <span class="d-flex align-items-center justify-content-between w-100">
+              <span>Your Cart</span>
+              <span class="cart-badge" style="position:static;" id="drawerCartBadge">4</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ======================================================
+         HERO LOOKUP SECTION
+         ====================================================== -->
+    <section class="ord-hero" aria-label="Order lookup">
+      <div class="container-xl">
+        <div class="ord-hero__inner">
+          <div class="ord-hero__icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"></rect><path d="M16 8h4l3 5v3h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <h1 class="ord-hero__title">Track Your Order</h1>
+          <p class="ord-hero__subtitle">Enter your order number below to get real-time shipping and delivery updates.</p>
+          <form class="ord-lookup-bar" id="ordLookupForm" novalidate role="search">
+            <div class="ord-lookup-bar__field">
+              <label class="visually-hidden" for="ordLookupInput">Order number</label>
+              <svg class="ord-lookup-bar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="ordLookupInput" class="ord-lookup-bar__input" placeholder="e.g. ORD12345" autocomplete="off" spellcheck="false" aria-label="Order number">
+            </div>
+            <button type="submit" class="btn btn-accent ord-lookup-bar__btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              Track Order
+            </button>
+          </form>
+          <p class="ord-lookup-bar__hint" id="ordLookupMsg" aria-live="polite">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            Your order number is in your confirmation email (e.g. ORD12345)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         MY ORDERS — LIST VIEW
+         ====================================================== -->
+    <section class="ord-list-section" id="ordListView" aria-label="My orders">
+      <div class="container-xl">
+
+        <div class="ord-section-head">
+          <h2 class="ord-section-title">My Orders</h2>
+          <span class="ord-section-count" id="ordCount">3 orders</span>
+        </div>
+
+        <div class="ord-list" id="ordList" role="list">
+
+          <!-- ── ORDER CARD 1 ── -->
+          <article class="ord-list-card" role="listitem" data-order-id="ORD12345">
+            <div class="ord-list-card__header">
+              <div class="ord-list-card__meta">
+                <span class="ord-list-card__id">#ORD12345</span>
+                <span class="ord-dot" aria-hidden="true">·</span>
+                <time class="ord-list-card__date" datetime="2026-07-15">15 Jul 2026</time>
+              </div>
+              <span class="ord-badge ord-badge--shipped">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"></rect><path d="M16 8h4l3 5v3h-7V8z"></path></svg>
+                Shipped
+              </span>
+            </div>
+
+            <div class="ord-list-card__body">
+              <div class="ord-list-card__items" aria-label="Order items preview">
+                <div class="ord-list-card__thumb ord-list-card__thumb--1">
+                  <span class="ord-list-card__thumb-placeholder" aria-hidden="true"></span>
+                </div>
+                <div class="ord-list-card__thumb ord-list-card__thumb--2">
+                  <span class="ord-list-card__thumb-placeholder" aria-hidden="true"></span>
+                </div>
+                <div class="ord-list-card__thumb ord-list-card__thumb--3">
+                  <span class="ord-list-card__thumb-placeholder" aria-hidden="true"></span>
+                </div>
+                <span class="ord-list-card__item-names">Elsa Chicken Curry Masala + 2 more</span>
+              </div>
+
+              <div class="ord-list-card__info">
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Total</span>
+                  <span class="ord-list-card__stat-val">₹539</span>
+                </div>
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Items</span>
+                  <span class="ord-list-card__stat-val">4 items</span>
+                </div>
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Est. Delivery</span>
+                  <span class="ord-list-card__stat-val ord-list-card__stat-val--accent">20 Jul 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="ord-list-card__progress" aria-label="Delivery progress: Shipped (step 4 of 6)">
+              <div class="ord-list-card__progress-steps">
+                <span class="ord-progress-step ord-progress-step--done" title="Placed"></span>
+                <span class="ord-progress-step ord-progress-step--done" title="Confirmed"></span>
+                <span class="ord-progress-step ord-progress-step--done" title="Processing"></span>
+                <span class="ord-progress-step ord-progress-step--active" title="Shipped"></span>
+                <span class="ord-progress-step ord-progress-step--pending" title="Out for Delivery"></span>
+                <span class="ord-progress-step ord-progress-step--pending" title="Delivered"></span>
+              </div>
+              <div class="ord-list-card__progress-labels">
+                <span>Placed</span>
+                <span class="ord-progress-active-label">Shipped</span>
+                <span>Delivered</span>
+              </div>
+            </div>
+
+            <div class="ord-list-card__footer">
+              <a href="#" class="btn btn-sm btn-outline-secondary ord-list-card__invoice-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Invoice
+              </a>
+              <button type="button" class="btn btn-sm btn-accent ord-list-card__detail-btn" data-order-id="ORD12345">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <!-- ── ORDER CARD 2 ── -->
+          <article class="ord-list-card" role="listitem" data-order-id="ORD12089">
+            <div class="ord-list-card__header">
+              <div class="ord-list-card__meta">
+                <span class="ord-list-card__id">#ORD12089</span>
+                <span class="ord-dot" aria-hidden="true">·</span>
+                <time class="ord-list-card__date" datetime="2026-06-28">28 Jun 2026</time>
+              </div>
+              <span class="ord-badge ord-badge--delivered">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Delivered
+              </span>
+            </div>
+
+            <div class="ord-list-card__body">
+              <div class="ord-list-card__items" aria-label="Order items preview">
+                <div class="ord-list-card__thumb ord-list-card__thumb--1">
+                  <span class="ord-list-card__thumb-placeholder" aria-hidden="true"></span>
+                </div>
+                <div class="ord-list-card__thumb ord-list-card__thumb--2">
+                  <span class="ord-list-card__thumb-placeholder" aria-hidden="true"></span>
+                </div>
+                <span class="ord-list-card__item-names">Elsa Garam Masala + 1 more</span>
+              </div>
+
+              <div class="ord-list-card__info">
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Total</span>
+                  <span class="ord-list-card__stat-val">₹289</span>
+                </div>
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Items</span>
+                  <span class="ord-list-card__stat-val">2 items</span>
+                </div>
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Delivered on</span>
+                  <span class="ord-list-card__stat-val">3 Jul 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Progress bar — all complete -->
+            <div class="ord-list-card__progress" aria-label="Delivery progress: Delivered (complete)">
+              <div class="ord-list-card__progress-steps">
+                <span class="ord-progress-step ord-progress-step--done" title="Placed"></span>
+                <span class="ord-progress-step ord-progress-step--done" title="Confirmed"></span>
+                <span class="ord-progress-step ord-progress-step--done" title="Processing"></span>
+                <span class="ord-progress-step ord-progress-step--done" title="Shipped"></span>
+                <span class="ord-progress-step ord-progress-step--done" title="Out for Delivery"></span>
+                <span class="ord-progress-step ord-progress-step--done ord-progress-step--delivered" title="Delivered"></span>
+              </div>
+              <div class="ord-list-card__progress-labels">
+                <span>Placed</span>
+                <span class="ord-progress-active-label">Delivered</span>
+                <span>Delivered</span>
+              </div>
+            </div>
+
+            <div class="ord-list-card__footer">
+              <a href="#" class="btn btn-sm btn-outline-secondary ord-list-card__invoice-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Invoice
+              </a>
+              <button type="button" class="btn btn-sm btn-outline-secondary ord-list-card__reorder-btn" data-order-id="ORD12089">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.86"></path></svg>
+                Reorder
+              </button>
+              <button type="button" class="btn btn-sm btn-accent ord-list-card__detail-btn" data-order-id="ORD12089">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <!-- ── ORDER CARD 3 ── -->
+          <article class="ord-list-card" role="listitem" data-order-id="ORD11876">
+            <div class="ord-list-card__header">
+              <div class="ord-list-card__meta">
+                <span class="ord-list-card__id">#ORD11876</span>
+                <span class="ord-dot" aria-hidden="true">·</span>
+                <time class="ord-list-card__date" datetime="2026-07-10">10 Jul 2026</time>
+              </div>
+              <span class="ord-badge ord-badge--processing">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-.68-7.82"></path></svg>
+                Processing
+              </span>
+            </div>
+
+            <div class="ord-list-card__body">
+              <div class="ord-list-card__items" aria-label="Order items preview">
+                <div class="ord-list-card__thumb ord-list-card__thumb--1">
+                  <span class="ord-list-card__thumb-placeholder" aria-hidden="true"></span>
+                </div>
+                <span class="ord-list-card__item-names">Elsa Premium Tea Powder</span>
+              </div>
+
+              <div class="ord-list-card__info">
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Total</span>
+                  <span class="ord-list-card__stat-val">₹450</span>
+                </div>
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Items</span>
+                  <span class="ord-list-card__stat-val">1 item</span>
+                </div>
+                <div class="ord-list-card__stat">
+                  <span class="ord-list-card__stat-label">Est. Delivery</span>
+                  <span class="ord-list-card__stat-val ord-list-card__stat-val--accent">14 Jul 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="ord-list-card__progress" aria-label="Delivery progress: Processing (step 3 of 6)">
+              <div class="ord-list-card__progress-steps">
+                <span class="ord-progress-step ord-progress-step--done" title="Placed"></span>
+                <span class="ord-progress-step ord-progress-step--done" title="Confirmed"></span>
+                <span class="ord-progress-step ord-progress-step--active" title="Processing"></span>
+                <span class="ord-progress-step ord-progress-step--pending" title="Shipped"></span>
+                <span class="ord-progress-step ord-progress-step--pending" title="Out for Delivery"></span>
+                <span class="ord-progress-step ord-progress-step--pending" title="Delivered"></span>
+              </div>
+              <div class="ord-list-card__progress-labels">
+                <span>Placed</span>
+                <span class="ord-progress-active-label">Processing</span>
+                <span>Delivered</span>
+              </div>
+            </div>
+
+            <div class="ord-list-card__footer">
+              <a href="#" class="btn btn-sm btn-outline-secondary ord-list-card__invoice-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Invoice
+              </a>
+              <button type="button" class="btn btn-sm btn-accent ord-list-card__detail-btn" data-order-id="ORD11876">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                View Details
+              </button>
+            </div>
+          </article>
+
+        </div><!-- /ord-list -->
+
+        <!-- Not found message -->
+        <div class="ord-not-found" id="ordNotFound" hidden role="alert">
+          <div class="ord-not-found__icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h3 class="ord-not-found__title">No order found</h3>
+          <p class="ord-not-found__desc">We couldn't find order <strong id="ordNotFoundId"></strong>. Please check the order number in your confirmation email and try again.</p>
+          <button type="button" class="btn btn-accent mt-1" id="ordClearSearch">Show All Orders</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         ORDER DETAIL VIEW (hidden, shown on "View Details")
+         ====================================================== -->
+    <section class="ord-detail-section" id="ordDetailView" hidden aria-label="Order details">
+      <div class="container-xl">
+
+        <!-- Back nav -->
+        <button type="button" class="ord-back-btn" id="ordBackBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          Back to My Orders
+        </button>
+
+        <!-- Page heading -->
+        <div class="ord-page-head" id="ordDetailHead">
+          <!-- filled by JS -->
+        </div>
+
+        <div class="row g-4">
+
+          <!-- LEFT COLUMN -->
+          <div class="col-lg-8">
+
+            <!-- Status Tracker -->
+            <div class="ord-card ord-card--tracker" aria-label="Order status">
+              <div class="ord-card__head">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"></rect><path d="M16 8h4l3 5v3h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <h2 class="ord-card__title">Order Status</h2>
+                <span class="ord-badge ms-auto" id="detailStatusBadge"></span>
+              </div>
+              <div class="ord-tracker" id="ordTracker" role="list" aria-label="Delivery stages">
+
+                <div class="ord-tracker__step" role="listitem" data-step="0">
+                  <div class="ord-tracker__node">
+                    <span class="ord-tracker__icon" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <div class="ord-tracker__line"></div>
+                  </div>
+                  <div class="ord-tracker__info">
+                    <p class="ord-tracker__label">Order Placed</p>
+                    <p class="ord-tracker__date" id="trackerDate0">—</p>
+                  </div>
+                </div>
+
+                <div class="ord-tracker__step" role="listitem" data-step="1">
+                  <div class="ord-tracker__node">
+                    <span class="ord-tracker__icon" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <div class="ord-tracker__line"></div>
+                  </div>
+                  <div class="ord-tracker__info">
+                    <p class="ord-tracker__label">Confirmed</p>
+                    <p class="ord-tracker__date" id="trackerDate1">—</p>
+                  </div>
+                </div>
+
+                <div class="ord-tracker__step" role="listitem" data-step="2">
+                  <div class="ord-tracker__node">
+                    <span class="ord-tracker__icon" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <div class="ord-tracker__line"></div>
+                  </div>
+                  <div class="ord-tracker__info">
+                    <p class="ord-tracker__label">Processing</p>
+                    <p class="ord-tracker__date" id="trackerDate2">—</p>
+                  </div>
+                </div>
+
+                <div class="ord-tracker__step" role="listitem" data-step="3">
+                  <div class="ord-tracker__node">
+                    <span class="ord-tracker__icon" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"></rect><path d="M16 8h4l3 5v3h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    </span>
+                    <div class="ord-tracker__line"></div>
+                  </div>
+                  <div class="ord-tracker__info">
+                    <p class="ord-tracker__label">Shipped</p>
+                    <p class="ord-tracker__date" id="trackerDate3">—</p>
+                  </div>
+                </div>
+
+                <div class="ord-tracker__step" role="listitem" data-step="4">
+                  <div class="ord-tracker__node">
+                    <span class="ord-tracker__icon" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </span>
+                    <div class="ord-tracker__line"></div>
+                  </div>
+                  <div class="ord-tracker__info">
+                    <p class="ord-tracker__label">Out for Delivery</p>
+                    <p class="ord-tracker__date" id="trackerDate4">—</p>
+                  </div>
+                </div>
+
+                <div class="ord-tracker__step" role="listitem" data-step="5">
+                  <div class="ord-tracker__node">
+                    <span class="ord-tracker__icon" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                  </div>
+                  <div class="ord-tracker__info">
+                    <p class="ord-tracker__label">Delivered</p>
+                    <p class="ord-tracker__date" id="trackerDate5">—</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Order Items -->
+            <div class="ord-card" aria-label="Order items">
+              <div class="ord-card__head">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <h2 class="ord-card__title">Order Items</h2>
+              </div>
+              <div class="ord-items-list" id="detailItemsList">
+                <!-- filled by JS -->
+              </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="ord-card" aria-label="Order timeline">
+              <div class="ord-card__head">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <h2 class="ord-card__title">Order Timeline</h2>
+              </div>
+              <ol class="ord-timeline" id="detailTimeline" aria-label="Order history">
+                <!-- filled by JS -->
+              </ol>
+            </div>
+
+          </div><!-- /left col -->
+
+          <!-- RIGHT COLUMN -->
+          <div class="col-lg-4">
+
+            <!-- Summary -->
+            <div class="ord-card ord-card--sticky" aria-label="Order summary">
+              <div class="ord-card__head">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <h2 class="ord-card__title">Summary</h2>
+              </div>
+              <dl class="ord-summary-list" id="detailSummaryList">
+                <!-- filled by JS -->
+              </dl>
+              <hr class="ord-divider">
+              <div class="ord-billing" id="detailBilling">
+                <!-- filled by JS -->
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="ord-card" aria-label="Shipping address">
+              <div class="ord-card__head">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <h2 class="ord-card__title">Shipping Address</h2>
+              </div>
+              <address class="ord-address" id="detailAddress">
+                <!-- filled by JS -->
+              </address>
+            </div>
+
+            <!-- Payment Info -->
+            <div class="ord-card" aria-label="Payment information">
+              <div class="ord-card__head">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                <h2 class="ord-card__title">Payment</h2>
+              </div>
+              <dl class="ord-summary-list" id="detailPayment">
+                <!-- filled by JS -->
+              </dl>
+            </div>
+
+            <!-- Delivery / Courier -->
+            <div class="ord-card" id="detailDeliveryCard" aria-label="Delivery information">
+              <div class="ord-card__head">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"></rect><path d="M16 8h4l3 5v3h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <h2 class="ord-card__title">Delivery</h2>
+              </div>
+              <dl class="ord-summary-list" id="detailDelivery">
+                <!-- filled by JS -->
+              </dl>
+              <div class="px-3 pb-3" id="detailTrackBtn"></div>
+            </div>
+
+            <!-- Actions -->
+            <div class="ord-card ord-card--actions" aria-label="Order actions">
+              <h2 class="ord-card__title mb-3">Need Help?</h2>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-secondary ord-action-btn" id="detailInvoiceBtn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  Download Invoice
+                </button>
+                <button type="button" class="btn btn-outline-secondary ord-action-btn" id="detailReorderBtn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.86"></path></svg>
+                  Reorder Items
+                </button>
+                <a href="contact.html" class="btn btn-outline-secondary ord-action-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  Contact Support
+                </a>
+              </div>
+            </div>
+
+          </div><!-- /right col -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="container-xl py-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <span class="footer-brand">
+            <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+          </span>
+          <p class="mb-0" style="max-width:32ch;">Traditional spices, curry powders, tea and pantry essentials from Heaven Valley Industries — made the honest way since our founding, over thirty-one years ago.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Follow elsa on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" aria-label="Follow elsa on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" aria-label="Subscribe to elsa on YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.7 12 3.7 12 3.7s-6.6 0-8.4.6A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.6 8.4.6 8.4.6s6.6 0 8.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"></path><polygon points="9.8 15.5 15.8 12 9.8 8.5 9.8 15.5"></polygon></svg></a>
+          </div>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Main Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Product Categories</h2>
+          <ul class="footer-links">
+            <li><a href="products.html">Curry Powders</a></li>
+            <li><a href="products.html">Spice Powders</a></li>
+            <li><a href="products.html">Tea Powders</a></li>
+            <li><a href="products.html">Ready Mixes</a></li>
+            <li><a href="products.html">Ghee</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Contact</h2>
+          <ul class="footer-links">
+            <li>Heaven Valley Industries<br>Humpamon, Pathanamthitta<br>Kerala 689502, India</li>
+            <li><a href="tel:09539195111">09539195111</a></li>
+            <li><a href="mailto:heavenvalley14@gmail.com">heavenvalley14@gmail.com</a></li>
+            <li>Mon–Sat, 9 AM – 6 PM IST</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+        <span>© <span id="footerYear"></span> Heaven Valley Industries. All rights reserved.</span>
+        <span>ISO-Certified · Organic · Kerala-Sourced</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick view dialog (required by main.js) -->
+  <dialog class="quick-view" id="quickViewDialog" aria-labelledby="quickViewTitle">
+    <button type="button" class="icon-btn quick-view__close" id="quickViewClose" aria-label="Close quick view">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="quick-view__body">
+      <div class="quick-view__media">
+        <span class="media-placeholder" id="quickViewMedia" aria-hidden="true"></span>
+      </div>
+      <div>
+        <h2 class="h4 mb-1" id="quickViewTitle"></h2>
+        <p class="product-card__weight" id="quickViewWeight"></p>
+        <p class="product-card__price" id="quickViewPrice"></p>
+        <p id="quickViewDesc"></p>
+        <button type="button" class="btn btn-accent btn-add" id="quickViewAdd">
+          <span class="btn-add__label">Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/order-tracking.js"></script>
+</body>
+</html>

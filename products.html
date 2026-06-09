@@ -1,0 +1,975 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products — Curry Powders, Spices, Tea &amp; More | elsa, Heaven Valley Industries</title>
+  <meta name="description" content="Browse our full range of organic spices, curry powders, tea powders, ready mixes, ghee and traditional food products — ISO-certified, Kerala-sourced, made without preservatives.">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Heritage Pairing: Fraunces (warm display serif) + Source Sans 3 (humanist body sans); self-host in production -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="site-header sticky-top">
+    <div class="container-xl">
+      <div class="site-header__bar">
+
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="products.html" aria-current="page">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0">
+
+          <button type="button" class="icon-btn" id="searchToggle" aria-haspopup="true" aria-expanded="false" aria-controls="searchPanel" aria-label="Search products">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <div class="account-menu" id="accountMenu">
+            <button type="button" class="icon-btn" id="accountMenuTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="accountMenuPanel" aria-label="Account menu">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+            <div class="account-menu__panel" id="accountMenuPanel" role="menu" aria-label="Account">
+              <a href="#" role="menuitem">My Account</a>
+              <a href="order-tracking.html" role="menuitem">Track Order</a>
+              <a href="login.html" role="menuitem">Sign In</a>
+            </div>
+          </div>
+
+          <a class="icon-btn" href="cart.html" aria-label="Cart, 3 items">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge" id="cartBadge">3</span>
+          </a>
+
+          <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Open menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <div class="container-xl">
+          <form class="header-search" role="search" action="#" method="get">
+            <label class="visually-hidden" for="site-search">Search products</label>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="search" id="site-search" name="q" placeholder="Search curry powders, spices, tea…">
+            <button type="button" class="icon-btn search-panel__close" id="searchClose" aria-label="Close search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile" aria-hidden="true">
+    <div class="mobile-drawer__head">
+      <span class="brand"><img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48"></span>
+      <button type="button" class="icon-btn" id="drawerClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Browse</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" aria-current="page">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Account</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="#">My Account</a></li>
+        <li><a href="order-tracking.html">Track Order</a></li>
+        <li><a href="login.html">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section" style="border-bottom: none;">
+      <p class="mobile-drawer__label">Shopping</p>
+      <ul class="mobile-drawer__list">
+        <li>
+          <a href="cart.html">
+            <span class="d-flex align-items-center justify-content-between w-100">
+              <span>Your Cart</span>
+              <span class="cart-badge" style="position: static;">3</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============================== PAGE BANNER ============================== -->
+    <section class="page-banner">
+      <div class="container-xl">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb mb-3">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Products</li>
+          </ol>
+        </nav>
+        <h1 class="page-banner__title">Products</h1>
+        <p class="page-banner__lede">Browse our collection of organic spices, curry powders, tea powders, ready mixes, and traditional food products.</p>
+      </div>
+    </section>
+
+    <!-- ============================== LISTING ============================== -->
+    <section class="section" aria-labelledby="listing-heading">
+      <h2 class="visually-hidden" id="listing-heading">Product listing and filters</h2>
+      <div class="container-xl">
+        <div class="row g-4 g-xl-5">
+
+          <!-- Filter sidebar -->
+          <div class="col-12 col-lg-3">
+            <aside class="filter-sidebar" id="filterSidebar" aria-label="Filter products">
+              <div class="filter-sidebar__head">
+                <h2 class="filter-sidebar__title">Filters</h2>
+                <button type="button" class="icon-btn" id="filterClose" aria-label="Close filters">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+
+              <form id="filterForm">
+                <fieldset class="filter-group">
+                  <legend>Category</legend>
+                  <label class="filter-option">
+                    <input type="checkbox" name="category" value="curry-powders">
+                    <span>Curry Powders</span>
+                    <span class="filter-option__count">(3)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="category" value="spice-powders">
+                    <span>Spice Powders</span>
+                    <span class="filter-option__count">(3)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="category" value="tea-powders">
+                    <span>Tea Powders</span>
+                    <span class="filter-option__count">(3)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="category" value="ready-mixes">
+                    <span>Ready Mixes</span>
+                    <span class="filter-option__count">(3)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="category" value="ghee">
+                    <span>Ghee</span>
+                    <span class="filter-option__count">(2)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="category" value="organic-products">
+                    <span>Organic Products</span>
+                    <span class="filter-option__count">(4)</span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                  <legend>Price</legend>
+                  <div class="price-filter">
+                    <div class="price-filter__values">
+                      <span>₹0</span>
+                      <span id="maxPriceValue">Up to ₹1000</span>
+                    </div>
+                    <input type="range" id="maxPriceRange" min="0" max="1000" step="10" value="1000" aria-label="Maximum price, in rupees">
+                    <div class="price-filter__field">
+                      <label for="maxPriceNumber">Or type a maximum amount (₹)</label>
+                      <input type="number" id="maxPriceNumber" min="0" max="1000" step="5" inputmode="numeric" placeholder="1000">
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                  <legend>Weight</legend>
+                  <label class="filter-option">
+                    <input type="checkbox" name="weight" value="100">
+                    <span>100 g</span>
+                    <span class="filter-option__count">(4)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="weight" value="250">
+                    <span>250 g</span>
+                    <span class="filter-option__count">(5)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="weight" value="500">
+                    <span>500 g</span>
+                    <span class="filter-option__count">(5)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="weight" value="1000">
+                    <span>1 kg</span>
+                    <span class="filter-option__count">(4)</span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                  <legend>Availability</legend>
+                  <label class="filter-option">
+                    <input type="checkbox" name="availability" value="in-stock">
+                    <span>In Stock</span>
+                    <span class="filter-option__count">(15)</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" name="availability" value="out-of-stock">
+                    <span>Out of Stock</span>
+                    <span class="filter-option__count">(3)</span>
+                  </label>
+                </fieldset>
+
+                <button type="button" class="btn btn-ghost w-100" id="clearFiltersBtn" disabled>Clear Filters</button>
+              </form>
+
+              <div class="filter-sidebar__foot">
+                <button type="button" class="btn btn-accent flex-fill" id="showResultsBtn">Show Results</button>
+              </div>
+            </aside>
+          </div>
+          <div class="filter-scrim" id="filterScrim" hidden></div>
+
+          <!-- Listing area -->
+          <div class="col-12 col-lg-9">
+
+            <div class="listing-controls" id="listingTop">
+              <p class="result-count" id="resultCount" aria-live="polite">Showing 1–6 of 18 products</p>
+              <div class="active-filters" id="activeFilters"></div>
+
+              <div class="listing-controls__right">
+                <button type="button" class="btn btn-ghost d-lg-none" id="filterToggle" aria-haspopup="true" aria-expanded="false" aria-controls="filterSidebar">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                  <span>Filters</span>
+                  <span class="filter-toggle__badge" id="filterToggleBadge" hidden>0</span>
+                </button>
+
+                <label class="sort-control">
+                  <span>Sort by</span>
+                  <select id="sortSelect" aria-label="Sort products by">
+                    <option value="popularity">Popularity</option>
+                    <option value="new">New Arrivals</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                  </select>
+                </label>
+
+                <div class="view-toggle" role="group" aria-label="Choose layout">
+                  <button type="button" class="view-toggle__btn is-active" id="viewGridBtn" aria-pressed="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <span>Grid view</span>
+                  </button>
+                  <button type="button" class="view-toggle__btn" id="viewListBtn" aria-pressed="false">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                    <span>List view</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="empty-state" id="emptyState" hidden>
+              <h3>No products match these filters</h3>
+              <p>Try removing one or two filters — or clear them all to see the full range again.</p>
+              <button type="button" class="btn btn-accent" id="emptyStateClear">Clear Filters</button>
+            </div>
+
+            <div class="row row-cols-2 row-cols-md-2 row-cols-xl-3 g-4" id="productGrid">
+
+              <!-- 1 — Chicken Curry Masala -->
+              <div class="col">
+                <article class="product-card" data-category="curry-powders" data-weight="250" data-price="150" data-availability="in-stock" data-rank="1">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Chicken Curry Masala 250g pack on neutral backdrop, 1200×1200" aria-hidden="true">Chicken Curry Masala</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Curry Powder</p>
+                    <h3 class="product-card__name">Chicken Curry Masala</h3>
+                    <p class="product-card__weight">250 g pack</p>
+                    <p class="product-card__price">₹150</p>
+                    <p class="product-card__desc">A robust, well-rounded blend built for everyday chicken curry — black pepper and curry leaf carry the base, with just enough heat to wake up a weeknight dinner.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Chicken Curry Masala">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Chicken Curry Masala" data-weight="250 g pack" data-price="₹150"
+                        data-desc="A robust, well-rounded blend built for everyday chicken curry — black pepper and curry leaf carry the base, with just enough heat to wake up a weeknight dinner."
+                        aria-label="View details: Chicken Curry Masala">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 2 — Fish Curry Masala -->
+              <div class="col">
+                <article class="product-card" data-category="curry-powders" data-weight="100" data-price="110" data-availability="in-stock" data-rank="11">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Fish Curry Masala 100g pouch on neutral backdrop, 1200×1200" aria-hidden="true">Fish Curry Masala</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Curry Powder</p>
+                    <h3 class="product-card__name">Fish Curry Masala</h3>
+                    <p class="product-card__weight">100 g pouch</p>
+                    <p class="product-card__price">₹110</p>
+                    <p class="product-card__desc">Tamarind-forward and coastal in character — the blend Kerala kitchens reach for when the catch of the day needs nothing more than a pot and patience.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Fish Curry Masala">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Fish Curry Masala" data-weight="100 g pouch" data-price="₹110"
+                        data-desc="Tamarind-forward and coastal in character — the blend Kerala kitchens reach for when the catch of the day needs nothing more than a pot and patience."
+                        aria-label="View details: Fish Curry Masala">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 3 — Vegetable Curry Powder (out of stock) -->
+              <div class="col">
+                <article class="product-card" data-category="curry-powders" data-weight="1000" data-price="520" data-availability="out-of-stock" data-rank="17">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Vegetable Curry Powder 1kg pack on neutral backdrop, 1200×1200" aria-hidden="true">Vegetable Curry Powder</span>
+                    <span class="product-card__stock-badge">Out of Stock</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Curry Powder</p>
+                    <h3 class="product-card__name">Vegetable Curry Powder</h3>
+                    <p class="product-card__weight">1 kg pack</p>
+                    <p class="product-card__price">₹520</p>
+                    <p class="product-card__desc">A milder, all-purpose blend sized for kitchens that cook in volume — the same balance of warmth and earthiness in a pack that lasts the month.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-ghost" disabled aria-disabled="true">
+                        <span>Notify When Available</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Vegetable Curry Powder" data-weight="1 kg pack" data-price="₹520"
+                        data-desc="A milder, all-purpose blend sized for kitchens that cook in volume — the same balance of warmth and earthiness in a pack that lasts the month."
+                        aria-label="View details: Vegetable Curry Powder">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 4 — Turmeric Powder -->
+              <div class="col">
+                <article class="product-card" data-category="spice-powders" data-weight="250" data-price="95" data-availability="in-stock" data-rank="2">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Turmeric Powder 250g pack on neutral backdrop, 1200×1200" aria-hidden="true">Turmeric Powder</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Spice Powder</p>
+                    <h3 class="product-card__name">Turmeric Powder</h3>
+                    <p class="product-card__weight">250 g pack</p>
+                    <p class="product-card__price">₹95</p>
+                    <p class="product-card__desc">Stone-ground from sun-dried Kerala turmeric — the deep golden colour and gentle bitterness that anchors a pot of dal or a glass of warm milk.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Turmeric Powder">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Turmeric Powder" data-weight="250 g pack" data-price="₹95"
+                        data-desc="Stone-ground from sun-dried Kerala turmeric — the deep golden colour and gentle bitterness that anchors a pot of dal or a glass of warm milk."
+                        aria-label="View details: Turmeric Powder">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 5 — Coriander Powder -->
+              <div class="col">
+                <article class="product-card" data-category="spice-powders" data-weight="500" data-price="165" data-availability="in-stock" data-rank="4">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Coriander Powder 500g pack on neutral backdrop, 1200×1200" aria-hidden="true">Coriander Powder</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Spice Powder</p>
+                    <h3 class="product-card__name">Coriander Powder</h3>
+                    <p class="product-card__weight">500 g pack</p>
+                    <p class="product-card__price">₹165</p>
+                    <p class="product-card__desc">Roasted lightly before grinding to bring out its citrus-edged warmth — the spice most Kerala gravies start and finish with.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Coriander Powder">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Coriander Powder" data-weight="500 g pack" data-price="₹165"
+                        data-desc="Roasted lightly before grinding to bring out its citrus-edged warmth — the spice most Kerala gravies start and finish with."
+                        aria-label="View details: Coriander Powder">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 6 — Black Pepper Powder -->
+              <div class="col">
+                <article class="product-card" data-category="spice-powders" data-weight="100" data-price="140" data-availability="in-stock" data-rank="8">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Black Pepper Powder 100g pouch on neutral backdrop, 1200×1200" aria-hidden="true">Black Pepper Powder</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Spice Powder</p>
+                    <h3 class="product-card__name">Black Pepper Powder</h3>
+                    <p class="product-card__weight">100 g pouch</p>
+                    <p class="product-card__price">₹140</p>
+                    <p class="product-card__desc">Stone-ground from hand-picked Wayanad peppercorns — sharp, clean heat that holds its character even after the dish has cooled.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Black Pepper Powder">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Black Pepper Powder" data-weight="100 g pouch" data-price="₹140"
+                        data-desc="Stone-ground from hand-picked Wayanad peppercorns — sharp, clean heat that holds its character even after the dish has cooled."
+                        aria-label="View details: Black Pepper Powder">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 7 — Cardamom Chai Blend -->
+              <div class="col">
+                <article class="product-card" data-category="tea-powders" data-weight="250" data-price="230" data-availability="in-stock" data-rank="5">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Cardamom Chai Blend 250g pack on neutral backdrop, 1200×1200" aria-hidden="true">Cardamom Chai Blend</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Tea Powder</p>
+                    <h3 class="product-card__name">Cardamom Chai Blend</h3>
+                    <p class="product-card__weight">250 g pack</p>
+                    <p class="product-card__price">₹230</p>
+                    <p class="product-card__desc">Black tea ground with whole cardamom for a cup that needs nothing more than milk and a few minutes on the stove.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Cardamom Chai Blend">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Cardamom Chai Blend" data-weight="250 g pack" data-price="₹230"
+                        data-desc="Black tea ground with whole cardamom for a cup that needs nothing more than milk and a few minutes on the stove."
+                        aria-label="View details: Cardamom Chai Blend">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 8 — Ginger Tea Powder -->
+              <div class="col">
+                <article class="product-card" data-category="tea-powders" data-weight="100" data-price="120" data-availability="in-stock" data-rank="13">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Ginger Tea Powder 100g pouch on neutral backdrop, 1200×1200" aria-hidden="true">Ginger Tea Powder</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Tea Powder</p>
+                    <h3 class="product-card__name">Ginger Tea Powder</h3>
+                    <p class="product-card__weight">100 g pouch</p>
+                    <p class="product-card__price">₹120</p>
+                    <p class="product-card__desc">A brisk, warming blend for the mornings that call for a little more than plain tea — ginger first, tea close behind.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Ginger Tea Powder">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Ginger Tea Powder" data-weight="100 g pouch" data-price="₹120"
+                        data-desc="A brisk, warming blend for the mornings that call for a little more than plain tea — ginger first, tea close behind."
+                        aria-label="View details: Ginger Tea Powder">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 9 — Green Tea Leaves (out of stock) -->
+              <div class="col">
+                <article class="product-card" data-category="tea-powders" data-weight="250" data-price="260" data-availability="out-of-stock" data-rank="18">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Green Tea Leaves 250g pack on neutral backdrop, 1200×1200" aria-hidden="true">Green Tea Leaves</span>
+                    <span class="product-card__stock-badge">Out of Stock</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Tea Powder</p>
+                    <h3 class="product-card__name">Green Tea Leaves</h3>
+                    <p class="product-card__weight">250 g pack</p>
+                    <p class="product-card__price">₹260</p>
+                    <p class="product-card__desc">Lightly oxidised and rolled by hand — a gentler cup for the part of the day when you want flavour without the jolt.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-ghost" disabled aria-disabled="true">
+                        <span>Notify When Available</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Green Tea Leaves" data-weight="250 g pack" data-price="₹260"
+                        data-desc="Lightly oxidised and rolled by hand — a gentler cup for the part of the day when you want flavour without the jolt."
+                        aria-label="View details: Green Tea Leaves">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 10 — Puttu Podi (Rice Mix) -->
+              <div class="col">
+                <article class="product-card" data-category="ready-mixes" data-weight="1000" data-price="175" data-availability="in-stock" data-rank="6">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Puttu Podi Rice Mix 1kg pack on neutral backdrop, 1200×1200" aria-hidden="true">Puttu Podi (Rice Mix)</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Ready Mix</p>
+                    <h3 class="product-card__name">Puttu Podi (Rice Mix)</h3>
+                    <p class="product-card__weight">1 kg pack</p>
+                    <p class="product-card__price">₹175</p>
+                    <p class="product-card__desc">Roasted rice flour, ground to the texture that steams into puttu without a single dry pocket — the breakfast Kerala mornings are built around.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Puttu Podi (Rice Mix)">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Puttu Podi (Rice Mix)" data-weight="1 kg pack" data-price="₹175"
+                        data-desc="Roasted rice flour, ground to the texture that steams into puttu without a single dry pocket — the breakfast Kerala mornings are built around."
+                        aria-label="View details: Puttu Podi (Rice Mix)">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 11 — Idiyappam Mix -->
+              <div class="col">
+                <article class="product-card" data-category="ready-mixes" data-weight="500" data-price="150" data-availability="in-stock" data-rank="10">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Idiyappam Mix 500g pack on neutral backdrop, 1200×1200" aria-hidden="true">Idiyappam Mix</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Ready Mix</p>
+                    <h3 class="product-card__name">Idiyappam Mix</h3>
+                    <p class="product-card__weight">500 g pack</p>
+                    <p class="product-card__price">₹150</p>
+                    <p class="product-card__desc">Pre-steamed rice flour that presses into even strands on the first try — for the mornings you want the dish without the usual fuss.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Idiyappam Mix">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Idiyappam Mix" data-weight="500 g pack" data-price="₹150"
+                        data-desc="Pre-steamed rice flour that presses into even strands on the first try — for the mornings you want the dish without the usual fuss."
+                        aria-label="View details: Idiyappam Mix">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 12 — Appam Batter Mix -->
+              <div class="col">
+                <article class="product-card" data-category="ready-mixes" data-weight="500" data-price="160" data-availability="in-stock" data-rank="15">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Appam Batter Mix 500g pack on neutral backdrop, 1200×1200" aria-hidden="true">Appam Batter Mix</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Ready Mix</p>
+                    <h3 class="product-card__name">Appam Batter Mix</h3>
+                    <p class="product-card__weight">500 g pack</p>
+                    <p class="product-card__price">₹160</p>
+                    <p class="product-card__desc">Fermented-flavour batter mix that needs only water and a little patience — lacy edges and a soft centre, the way appam should turn out.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Appam Batter Mix">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Appam Batter Mix" data-weight="500 g pack" data-price="₹160"
+                        data-desc="Fermented-flavour batter mix that needs only water and a little patience — lacy edges and a soft centre, the way appam should turn out."
+                        aria-label="View details: Appam Batter Mix">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 13 — Pure Cow Ghee -->
+              <div class="col">
+                <article class="product-card" data-category="ghee" data-weight="500" data-price="540" data-availability="in-stock" data-rank="3">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Pure Cow Ghee 500g jar on neutral backdrop, 1200×1200" aria-hidden="true">Pure Cow Ghee</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Ghee</p>
+                    <h3 class="product-card__name">Pure Cow Ghee</h3>
+                    <p class="product-card__weight">500 g jar</p>
+                    <p class="product-card__price">₹540</p>
+                    <p class="product-card__desc">Slow-simmered the traditional way from Kerala cow's milk — the deep aroma that finishes a pot of dal or a festival sweet properly.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Pure Cow Ghee">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Pure Cow Ghee" data-weight="500 g jar" data-price="₹540"
+                        data-desc="Slow-simmered the traditional way from Kerala cow's milk — the deep aroma that finishes a pot of dal or a festival sweet properly."
+                        aria-label="View details: Pure Cow Ghee">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 14 — Festival Ghee Tin -->
+              <div class="col">
+                <article class="product-card" data-category="ghee" data-weight="1000" data-price="980" data-availability="in-stock" data-rank="9">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Festival Ghee Tin 1kg on neutral backdrop, 1200×1200" aria-hidden="true">Festival Ghee Tin</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Ghee</p>
+                    <h3 class="product-card__name">Festival Ghee Tin</h3>
+                    <p class="product-card__weight">1 kg tin</p>
+                    <p class="product-card__price">₹980</p>
+                    <p class="product-card__desc">Sized for the seasons that call for more than a jar — the same slow-simmered ghee, in the tin Kerala households keep for festival cooking.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Festival Ghee Tin">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Festival Ghee Tin" data-weight="1 kg tin" data-price="₹980"
+                        data-desc="Sized for the seasons that call for more than a jar — the same slow-simmered ghee, in the tin Kerala households keep for festival cooking."
+                        aria-label="View details: Festival Ghee Tin">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 15 — Organic Turmeric Powder -->
+              <div class="col">
+                <article class="product-card" data-category="organic-products" data-weight="250" data-price="140" data-availability="in-stock" data-rank="7">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Organic Turmeric Powder 250g pack on neutral backdrop, 1200×1200" aria-hidden="true">Organic Turmeric Powder</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Organic Product</p>
+                    <h3 class="product-card__name">Organic Turmeric Powder</h3>
+                    <p class="product-card__weight">250 g pack</p>
+                    <p class="product-card__price">₹140</p>
+                    <p class="product-card__desc">Grown without synthetic inputs and stone-ground in small batches — the same warmth and colour, from farms certified at every step.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Organic Turmeric Powder">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Organic Turmeric Powder" data-weight="250 g pack" data-price="₹140"
+                        data-desc="Grown without synthetic inputs and stone-ground in small batches — the same warmth and colour, from farms certified at every step."
+                        aria-label="View details: Organic Turmeric Powder">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 16 — Organic Black Pepper -->
+              <div class="col">
+                <article class="product-card" data-category="organic-products" data-weight="100" data-price="165" data-availability="in-stock" data-rank="12">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Organic Black Pepper 100g pouch on neutral backdrop, 1200×1200" aria-hidden="true">Organic Black Pepper</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Organic Product</p>
+                    <h3 class="product-card__name">Organic Black Pepper</h3>
+                    <p class="product-card__weight">100 g pouch</p>
+                    <p class="product-card__price">₹165</p>
+                    <p class="product-card__desc">Hand-picked from certified organic Wayanad estates — peppery heat with a clean finish, nothing else in the pouch but pepper.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Organic Black Pepper">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Organic Black Pepper" data-weight="100 g pouch" data-price="₹165"
+                        data-desc="Hand-picked from certified organic Wayanad estates — peppery heat with a clean finish, nothing else in the pouch but pepper."
+                        aria-label="View details: Organic Black Pepper">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 17 — Organic Jaggery Powder -->
+              <div class="col">
+                <article class="product-card" data-category="organic-products" data-weight="1000" data-price="210" data-availability="in-stock" data-rank="14">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Organic Jaggery Powder 1kg pack on neutral backdrop, 1200×1200" aria-hidden="true">Organic Jaggery Powder</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Organic Product</p>
+                    <h3 class="product-card__name">Organic Jaggery Powder</h3>
+                    <p class="product-card__weight">1 kg pack</p>
+                    <p class="product-card__price">₹210</p>
+                    <p class="product-card__desc">Unrefined cane jaggery, dried and powdered for easy measuring — the rounder, deeper sweetness that white sugar doesn't carry.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-accent btn-add" data-product="Organic Jaggery Powder">
+                        <span class="btn-add__label">Add to Cart</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Organic Jaggery Powder" data-weight="1 kg pack" data-price="₹210"
+                        data-desc="Unrefined cane jaggery, dried and powdered for easy measuring — the rounder, deeper sweetness that white sugar doesn't carry."
+                        aria-label="View details: Organic Jaggery Powder">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 18 — Organic Coconut Oil (out of stock) -->
+              <div class="col">
+                <article class="product-card" data-category="organic-products" data-weight="500" data-price="385" data-availability="out-of-stock" data-rank="16">
+                  <div class="product-card__media">
+                    <span class="media-placeholder" data-asset="Product photo, Elsa Organic Coconut Oil 500g jar on neutral backdrop, 1200×1200" aria-hidden="true">Organic Coconut Oil</span>
+                    <span class="product-card__stock-badge">Out of Stock</span>
+                  </div>
+                  <div class="product-card__body">
+                    <p class="product-card__category">Organic Product</p>
+                    <h3 class="product-card__name">Organic Coconut Oil</h3>
+                    <p class="product-card__weight">500 g jar</p>
+                    <p class="product-card__price">₹385</p>
+                    <p class="product-card__desc">Cold-pressed from fresh Kerala coconut and bottled within hours — the aroma that tells you it hasn't sat in a warehouse.</p>
+                    <div class="product-card__actions">
+                      <button type="button" class="btn btn-ghost" disabled aria-disabled="true">
+                        <span>Notify When Available</span>
+                      </button>
+                      <button type="button" class="btn btn-quiet" data-quick-view
+                        data-name="Organic Coconut Oil" data-weight="500 g jar" data-price="₹385"
+                        data-desc="Cold-pressed from fresh Kerala coconut and bottled within hours — the aroma that tells you it hasn't sat in a warehouse."
+                        aria-label="View details: Organic Coconut Oil">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+
+            <nav class="pagination-row" id="paginationRow" aria-label="Product pages"></nav>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TRUST & QUALITY ============================== -->
+    <section class="section section--surface" aria-labelledby="trust-heading">
+      <div class="container-xl">
+        <div class="text-center mx-auto mb-4" style="max-width: 38rem;">
+          <h2 class="section-heading" id="trust-heading">Why Shoppers Trust Elsa</h2>
+          <p class="section-lede mx-auto">The same standards we've held to for thirty-one years — stated plainly, not just promised.</p>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 g-2">
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </span>
+              <p class="trust-item__label mb-0">ISO Certified</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path><path d="M9 12c0-2 1.5-3 3-3s3 1 3 3-1.5 3-3 3-3 2-3 4"></path></svg>
+              </span>
+              <p class="trust-item__label mb-0">Organic Products</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="6.5" y1="6.5" x2="17.5" y2="17.5"></line></svg>
+              </span>
+              <p class="trust-item__label mb-0">No Preservatives</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+              </span>
+              <p class="trust-item__label mb-0">Kerala Sourced</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="9" rx="1.5"></rect><path d="M7 11V8a5 5 0 0 1 10 0v3"></path></svg>
+              </span>
+              <p class="trust-item__label mb-0">Hygienically Packed</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>
+              </span>
+              <p class="trust-item__label mb-0">Freshness Guaranteed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container-xl py-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+        <div class="col">
+          <span class="footer-brand">
+            <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+          </span>
+          <p class="mb-0" style="max-width: 32ch;">Traditional spices, curry powders, tea and pantry essentials from Heaven Valley Industries — made the honest way since our founding, over thirty-one years ago.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Follow elsa on Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Follow elsa on Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Subscribe to elsa on YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.7 12 3.7 12 3.7s-6.6 0-8.4.6A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.6 8.4.6 8.4.6s6.6 0 8.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"></path><polygon points="9.8 15.5 15.8 12 9.8 8.5 9.8 15.5"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <h2 class="footer-heading h6">Main Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h2 class="footer-heading h6">Product Categories</h2>
+          <ul class="footer-links">
+            <li><a href="products.html#productGrid">Curry Powders</a></li>
+            <li><a href="products.html#productGrid">Spice Powders</a></li>
+            <li><a href="products.html#productGrid">Tea Powders</a></li>
+            <li><a href="products.html#productGrid">Ready Mixes</a></li>
+            <li><a href="products.html#productGrid">Ghee</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h2 class="footer-heading h6">Contact</h2>
+          <ul class="footer-links">
+            <li>Heaven Valley Industries<br>Humpamon, Pathanamthitta<br>Kerala 689502, India</li>
+            <li><a href="tel:09539195111">09539195111</a></li>
+            <li><a href="mailto:heavenvalley14@gmail.com">heavenvalley14@gmail.com</a></li>
+            <li>Mon–Sat, 9 AM – 6 PM IST</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+        <span>© <span id="footerYear"></span> Heaven Valley Industries. All rights reserved.</span>
+        <span>ISO-Certified · Organic · Kerala-Sourced</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick view dialog -->
+  <dialog class="quick-view" id="quickViewDialog" aria-labelledby="quickViewTitle">
+    <button type="button" class="icon-btn quick-view__close" id="quickViewClose" aria-label="Close quick view">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="quick-view__body">
+      <div class="quick-view__media">
+        <span class="media-placeholder" id="quickViewMedia" aria-hidden="true"></span>
+      </div>
+      <div>
+        <h2 class="h4 mb-1" id="quickViewTitle"></h2>
+        <p class="product-card__weight" id="quickViewWeight"></p>
+        <p class="product-card__price" id="quickViewPrice"></p>
+        <p id="quickViewDesc"></p>
+        <button type="button" class="btn btn-accent btn-add" id="quickViewAdd">
+          <span class="btn-add__label">Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

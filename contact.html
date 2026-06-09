@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us — Elsa, Heaven Valley Industries</title>
+  <meta name="description" content="Get in touch with Heaven Valley Industries — Elsa organic spices. Customer care, phone, email and address in Pathanamthitta, Kerala.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container-xl">
+      <div class="site-header__bar">
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+        </a>
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html" aria-current="page">Contact Us</a>
+        </nav>
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0">
+          <button type="button" class="icon-btn" id="searchToggle" aria-haspopup="true" aria-expanded="false" aria-controls="searchPanel" aria-label="Search products">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <div class="account-menu" id="accountMenu">
+            <button type="button" class="icon-btn" id="accountMenuTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="accountMenuPanel" aria-label="Account menu">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+            <div class="account-menu__panel" id="accountMenuPanel" role="menu" aria-label="Account">
+              <a href="#" role="menuitem">My Account</a>
+              <a href="order-tracking.html" role="menuitem">Track Order</a>
+              <a href="login.html" role="menuitem">Sign In</a>
+            </div>
+          </div>
+          <a class="icon-btn" href="cart.html" aria-label="Cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </a>
+          <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Open menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <div class="container-xl">
+          <form class="header-search" role="search" action="#" method="get">
+            <label class="visually-hidden" for="site-search">Search products</label>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="search" id="site-search" name="q" placeholder="Search curry powders, spices, tea…">
+            <button type="button" class="icon-btn search-panel__close" id="searchClose" aria-label="Close search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile" aria-hidden="true">
+    <div class="mobile-drawer__head">
+      <span class="brand"><img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48"></span>
+      <button type="button" class="icon-btn" id="drawerClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Browse</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Account</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="#">My Account</a></li>
+        <li><a href="order-tracking.html">Track Order</a></li>
+        <li><a href="login.html">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section" style="border-bottom:none;">
+      <p class="mobile-drawer__label">Shopping</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="cart.html">Your Cart</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- BREADCRUMB -->
+    <div class="page-banner page-banner--slim">
+      <div class="container-xl">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ================================================================
+         MAIN CONTACT SECTION
+         ================================================================ -->
+    <section class="section" aria-label="Contact us">
+      <div class="container-xl">
+
+        <!-- Page title -->
+        <div class="ctc-page-header">
+          <h1 class="ctc-page-title">Contact Us</h1>
+          <p class="ctc-page-subtitle">We'd love to hear from you — reach out anytime.</p>
+        </div>
+
+        <div class="row g-4 g-lg-5 align-items-stretch">
+
+          <!-- ============ LEFT: CONTACT INFORMATION ============ -->
+          <div class="col-12 col-lg-5">
+            <div class="ctc-info-card" aria-label="Contact information">
+
+              <!-- Decorative shapes -->
+              <span class="ctc-info-card__deco ctc-info-card__deco--tl" aria-hidden="true"></span>
+              <span class="ctc-info-card__deco ctc-info-card__deco--br" aria-hidden="true"></span>
+
+              <!-- Card heading -->
+              <div class="ctc-info-card__head">
+                <h2 class="ctc-info-card__title">Contact Information</h2>
+                <p class="ctc-info-card__company">Heaven Valley Industries</p>
+              </div>
+
+              <!-- Info blocks -->
+              <div class="ctc-info-blocks">
+
+                <!-- Address -->
+                <div class="ctc-info-block">
+                  <span class="ctc-info-block__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </span>
+                  <div class="ctc-info-block__content">
+                    <p class="ctc-info-block__label">Address</p>
+                    <address class="ctc-info-block__value">
+                      Humpamon, Pathanamthitta District,<br>
+                      Kerala, India — PIN 689502
+                    </address>
+                  </div>
+                </div>
+
+                <!-- Customer Care -->
+                <div class="ctc-info-block">
+                  <span class="ctc-info-block__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                  </span>
+                  <div class="ctc-info-block__content">
+                    <p class="ctc-info-block__label">Customer Care</p>
+                    <p class="ctc-info-block__value">
+                      <a href="tel:09539195111" class="ctc-contact-link">09539195111</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Phone Numbers -->
+                <div class="ctc-info-block">
+                  <span class="ctc-info-block__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </span>
+                  <div class="ctc-info-block__content">
+                    <p class="ctc-info-block__label">Phone Numbers</p>
+                    <p class="ctc-info-block__value">
+                      <a href="tel:08281375492" class="ctc-contact-link">08281375492</a><br>
+                      <a href="tel:9539291964" class="ctc-contact-link">9539291964</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="ctc-info-block">
+                  <span class="ctc-info-block__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </span>
+                  <div class="ctc-info-block__content">
+                    <p class="ctc-info-block__label">Email</p>
+                    <p class="ctc-info-block__value">
+                      <a href="mailto:heavenvalley14@gmail.com" class="ctc-contact-link">heavenvalley14@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div class="ctc-info-block">
+                  <span class="ctc-info-block__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </span>
+                  <div class="ctc-info-block__content">
+                    <p class="ctc-info-block__label">Business Hours</p>
+                    <p class="ctc-info-block__value">
+                      Monday – Saturday<br>
+                      9:00 AM – 6:00 PM IST
+                    </p>
+                  </div>
+                </div>
+
+              </div><!-- /info blocks -->
+
+              <!-- Social links -->
+              <div class="ctc-info-social" aria-label="Social media links">
+                <a href="#" class="ctc-social-link" aria-label="Follow us on Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="#" class="ctc-social-link" aria-label="Follow us on Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="#" class="ctc-social-link" aria-label="Subscribe on YouTube">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.7 12 3.7 12 3.7s-6.6 0-8.4.6A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.6 8.4.6 8.4.6s6.6 0 8.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"></path><polygon points="9.8 15.5 15.8 12 9.8 8.5 9.8 15.5"></polygon></svg>
+                </a>
+                <a href="#" class="ctc-social-link" aria-label="Send us a WhatsApp message">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                </a>
+              </div>
+
+            </div><!-- /ctc-info-card -->
+          </div><!-- /left col -->
+
+          <!-- ============ RIGHT: CONTACT FORM ============ -->
+          <div class="col-12 col-lg-7">
+            <div class="ctc-form-card">
+
+              <div class="ctc-form-card__head">
+                <h2 class="ctc-form-card__heading">Send Us a Message</h2>
+                <p class="ctc-form-card__subdesc">Fill out the form and our team will get back to you within 24 hours.</p>
+              </div>
+
+              <!-- Contact form -->
+              <form id="contactForm" novalidate>
+
+                <div class="row g-3">
+
+                  <!-- Full Name -->
+                  <div class="col-12">
+                    <div class="chk-field">
+                      <label class="chk-label" for="ctc-name">
+                        Full Name <span class="chk-req" aria-hidden="true">*</span>
+                      </label>
+                      <input type="text" id="ctc-name" class="chk-input" placeholder="Your full name" autocomplete="name" required>
+                      <span class="chk-error" id="ctc-name-err" role="alert" hidden></span>
+                    </div>
+                  </div>
+
+                  <!-- Phone + Email -->
+                  <div class="col-12 col-sm-6">
+                    <div class="chk-field">
+                      <label class="chk-label" for="ctc-phone">
+                        Phone Number <span class="chk-req" aria-hidden="true">*</span>
+                      </label>
+                      <input type="tel" id="ctc-phone" class="chk-input" placeholder="9876543210" autocomplete="tel" required>
+                      <span class="chk-error" id="ctc-phone-err" role="alert" hidden></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="chk-field">
+                      <label class="chk-label" for="ctc-email">
+                        Email Address <span class="chk-req" aria-hidden="true">*</span>
+                      </label>
+                      <input type="email" id="ctc-email" class="chk-input" placeholder="you@example.com" autocomplete="email" required>
+                      <span class="chk-error" id="ctc-email-err" role="alert" hidden></span>
+                    </div>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="col-12">
+                    <div class="chk-field">
+                      <label class="chk-label" for="ctc-message">
+                        Message <span class="chk-req" aria-hidden="true">*</span>
+                      </label>
+                      <textarea id="ctc-message" class="chk-textarea ctc-textarea" rows="6" placeholder="Write your message here…" required></textarea>
+                      <span class="chk-error" id="ctc-message-err" role="alert" hidden></span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn btn-accent w-100 ctc-submit-btn" id="ctcSubmitBtn">
+                  <span id="ctcBtnLabel" class="d-flex align-items-center justify-content-center gap-2">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    Send Message
+                  </span>
+                  <span id="ctcBtnSpinner" class="d-flex align-items-center justify-content-center gap-2" hidden>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Sending…
+                  </span>
+                </button>
+
+              </form><!-- /contactForm -->
+
+              <!-- Success state (shown after submit) -->
+              <div class="ctc-success" id="ctcSuccess" hidden aria-live="polite">
+                <div class="ctc-success__icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <h3 class="ctc-success__title">Message Sent!</h3>
+                <p class="ctc-success__text">Thank you for reaching out. Our team will get back to you within 24 hours on the email you provided.</p>
+                <button type="button" class="btn btn-ghost ctc-success__back" id="ctcSendAnother">
+                  Send another message
+                </button>
+              </div>
+
+            </div><!-- /ctc-form-card -->
+          </div><!-- /right col -->
+
+        </div><!-- /row -->
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CONTACT HIGHLIGHTS
+         ================================================================ -->
+    <section class="section section--surface" aria-labelledby="ctc-highlights-heading">
+      <div class="container-xl">
+
+        <div class="text-center mb-5">
+          <h2 class="section-heading mb-2" id="ctc-highlights-heading">Why Contact Us?</h2>
+          <p class="section-subheading mx-auto" style="max-width:50ch;">We're committed to giving every customer the best possible support — fast, friendly, and reliable.</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+          <div class="col">
+            <div class="highlight-card">
+              <div class="highlight-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+              </div>
+              <h3 class="highlight-card__title">Fast Customer Support</h3>
+              <p class="highlight-card__desc">Dedicated team available Mon–Sat to answer all your queries.</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="highlight-card">
+              <div class="highlight-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+              </div>
+              <h3 class="highlight-card__title">Premium Quality Products</h3>
+              <p class="highlight-card__desc">ISO-certified, organically sourced spices from the hills of Kerala.</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="highlight-card">
+              <div class="highlight-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </div>
+              <h3 class="highlight-card__title">Secure Shopping</h3>
+              <p class="highlight-card__desc">SSL-encrypted checkout and trusted payment gateways for your safety.</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="highlight-card">
+              <div class="highlight-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h3 class="highlight-card__title">Quick Response Time</h3>
+              <p class="highlight-card__desc">We aim to respond to every enquiry within 24 hours, guaranteed.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         MAP SECTION
+         ================================================================ -->
+    <section class="section" aria-labelledby="ctc-map-heading">
+      <div class="container-xl">
+
+        <div class="text-center mb-4">
+          <h2 class="section-heading mb-2" id="ctc-map-heading">Find Us On Map</h2>
+          <p class="section-subheading" style="max-width:44ch; margin:0 auto;">Visit our facility in the heart of Pathanamthitta, Kerala's spice country.</p>
+        </div>
+
+        <div class="ctc-map-wrap">
+          <!--
+            ┌─────────────────────────────────────────────────────┐
+            │  Replace this placeholder div with your actual      │
+            │  Google Maps embed code:                            │
+            │  <iframe src="https://maps.google.com/maps?…"       │
+            │    width="100%" height="100%" style="border:0"      │
+            │    allowfullscreen loading="lazy"></iframe>         │
+            └─────────────────────────────────────────────────────┘
+          -->
+          <div class="ctc-map-placeholder">
+            <div class="ctc-map-placeholder__pin" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <p class="ctc-map-placeholder__name">Heaven Valley Industries</p>
+            <p class="ctc-map-placeholder__address">
+              Humpamon, Pathanamthitta District<br>
+              Kerala, India — PIN 689502
+            </p>
+            <a href="https://maps.google.com/?q=Humpamon+Pathanamthitta+Kerala+India" target="_blank" rel="noopener noreferrer" class="btn btn-accent ctc-map-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact-footer">
+    <div class="container-xl py-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <span class="footer-brand">
+            <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+          </span>
+          <p class="mb-0" style="max-width:32ch;">Traditional spices, curry powders, tea and pantry essentials from Heaven Valley Industries — made the honest way since our founding, over thirty-one years ago.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Follow elsa on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" aria-label="Follow elsa on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" aria-label="Subscribe to elsa on YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.7 12 3.7 12 3.7s-6.6 0-8.4.6A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.6 8.4.6 8.4.6s6.6 0 8.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"></path><polygon points="9.8 15.5 15.8 12 9.8 8.5 9.8 15.5"></polygon></svg></a>
+          </div>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Main Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Product Categories</h2>
+          <ul class="footer-links">
+            <li><a href="products.html">Curry Powders</a></li>
+            <li><a href="products.html">Spice Powders</a></li>
+            <li><a href="products.html">Tea Powders</a></li>
+            <li><a href="products.html">Ready Mixes</a></li>
+            <li><a href="products.html">Ghee</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="footer-heading h6">Contact</h2>
+          <ul class="footer-links">
+            <li>Heaven Valley Industries<br>Humpamon, Pathanamthitta<br>Kerala 689502, India</li>
+            <li><a href="tel:09539195111">09539195111</a></li>
+            <li><a href="mailto:heavenvalley14@gmail.com">heavenvalley14@gmail.com</a></li>
+            <li>Mon–Sat, 9 AM – 6 PM IST</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+        <span>© <span id="footerYear"></span> Heaven Valley Industries. All rights reserved.</span>
+        <span>ISO-Certified · Organic · Kerala-Sourced</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick view dialog (required by main.js) -->
+  <dialog class="quick-view" id="quickViewDialog" aria-labelledby="quickViewTitle">
+    <button type="button" class="icon-btn quick-view__close" id="quickViewClose" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="quick-view__body">
+      <div class="quick-view__media"><span class="media-placeholder" id="quickViewMedia" aria-hidden="true"></span></div>
+      <div>
+        <h2 class="h4 mb-1" id="quickViewTitle"></h2>
+        <p class="product-card__weight" id="quickViewWeight"></p>
+        <p class="product-card__price" id="quickViewPrice"></p>
+        <p id="quickViewDesc"></p>
+        <button type="button" class="btn btn-accent btn-add" id="quickViewAdd"><span class="btn-add__label">Add to Cart</span></button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

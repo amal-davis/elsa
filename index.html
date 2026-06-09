@@ -1,0 +1,662 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>elsa — Traditional Spices, Curry Powders &amp; Pantry Essentials | Heaven Valley Industries</title>
+  <meta name="description" content="Shop curry powders, spice blends, tea, ready mixes and ghee from Heaven Valley Industries — ISO-certified, organic, Kerala-sourced, made without preservatives or artificial colours.">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Heritage Pairing: Fraunces (warm display serif) + Source Sans 3 (humanist body sans); self-host in production -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="site-header sticky-top">
+    <div class="container-xl">
+      <div class="site-header__bar">
+
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0">
+
+          <button type="button" class="icon-btn" id="searchToggle" aria-haspopup="true" aria-expanded="false" aria-controls="searchPanel" aria-label="Search products">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <div class="account-menu" id="accountMenu">
+            <button type="button" class="icon-btn" id="accountMenuTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="accountMenuPanel" aria-label="Account menu">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+            <div class="account-menu__panel" id="accountMenuPanel" role="menu" aria-label="Account">
+              <a href="#" role="menuitem">My Account</a>
+              <a href="order-tracking.html" role="menuitem">Track Order</a>
+              <a href="login.html" role="menuitem">Sign In</a>
+            </div>
+          </div>
+
+          <a class="icon-btn" href="cart.html" aria-label="Cart, 3 items">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge" id="cartBadge">3</span>
+          </a>
+
+          <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Open menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <div class="container-xl">
+          <form class="header-search" role="search" action="#" method="get">
+            <label class="visually-hidden" for="site-search">Search products</label>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="search" id="site-search" name="q" placeholder="Search curry powders, spices, tea…">
+            <button type="button" class="icon-btn search-panel__close" id="searchClose" aria-label="Close search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile" aria-hidden="true">
+    <div class="mobile-drawer__head">
+      <span class="brand"><img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48"></span>
+      <button type="button" class="icon-btn" id="drawerClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Browse</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section">
+      <p class="mobile-drawer__label">Account</p>
+      <ul class="mobile-drawer__list">
+        <li><a href="#">My Account</a></li>
+        <li><a href="order-tracking.html">Track Order</a></li>
+        <li><a href="login.html">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer__section" style="border-bottom: none;">
+      <p class="mobile-drawer__label">Shopping</p>
+      <ul class="mobile-drawer__list">
+        <li>
+          <a href="cart.html">
+            <span class="d-flex align-items-center justify-content-between w-100">
+              <span>Your Cart</span>
+              <span class="cart-badge" style="position: static;">3</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" aria-roledescription="carousel" aria-label="Featured highlights">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover" data-bs-interval="6500">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: Heritage and quality"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2: Purity and process"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3: Full range"></button>
+        </div>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="hero-slide" style="background-image: url('assets/images/elsa-hero-1.png');">
+              <div class="container-xl">
+                <div class="hero-slide__content">
+                  <span class="hero-slide__eyebrow">Heaven Valley Industries · Est. heritage</span>
+                  <h1 class="hero-slide__title">Spices crafted the way your grandmother trusted</h1>
+                  <p class="hero-slide__lede">Thirty-one years of Kerala-sourced spice craft, ISO-certified and made without shortcuts — so the tin you reach for tastes the same way it always has.</p>
+                  <a class="btn btn-accent btn-lg" href="products.html">Shop Curry Powders</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="hero-slide" style="background-image: url('assets/images/elsa-hero-2.png');">
+              <div class="container-xl">
+                <div class="hero-slide__content">
+                  <span class="hero-slide__eyebrow">No preservatives · No artificial colour</span>
+                  <h1 class="hero-slide__title">No preservatives. No artificial colours. Just spice.</h1>
+                  <p class="hero-slide__lede">Our flavour-lock process keeps every batch close to how it tasted the day it was ground — nothing added to make it last, nothing added to make it look brighter.</p>
+                  <a class="btn btn-accent btn-lg" href="about.html">See What Makes Us Different</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="hero-slide" style="background-image: url('assets/images/elsa-hero-3.png');">
+              <div class="container-xl">
+                <div class="hero-slide__content">
+                  <span class="hero-slide__eyebrow">Curry powders · Spice blends · Tea · Mixes · Ghee</span>
+                  <h1 class="hero-slide__title">Everything your kitchen reaches for, in one place</h1>
+                  <p class="hero-slide__lede">From the everyday curry powder to the ghee you save for festival cooking — restock the staples you already trust in a couple of taps.</p>
+                  <a class="btn btn-accent btn-lg" href="products.html">Browse All Products</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous slide</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next slide</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================== CATEGORIES ============================== -->
+    <section class="section section--paper" aria-labelledby="categories-heading">
+      <div class="container-xl">
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+          <div>
+            <h2 class="section-heading mb-1" id="categories-heading">Shop by Category</h2>
+            <p class="section-lede mb-0">Jump straight to the shelf you always reach for.</p>
+          </div>
+          <div class="scroller-controls" role="group" aria-label="Scroll categories">
+            <button type="button" class="icon-btn" id="categoryPrev" aria-label="Scroll categories left">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="icon-btn" id="categoryNext" aria-label="Scroll categories right">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <ul class="category-scroller list-unstyled mb-0" id="categoryScroller">
+          <li class="category-card-wrap">
+            <a class="category-card" href="products.html">
+              <span class="category-card__media">
+                <img src="assets/images/category-2.jpg" alt="Curry Powders" loading="lazy">
+              </span>
+              <span class="category-card__title">Curry Powders</span>
+            </a>
+          </li>
+          <li class="category-card-wrap">
+            <a class="category-card" href="products.html">
+              <span class="category-card__media">
+                <img src="assets/images/category-3.jpg" alt="Spice Powders" loading="lazy">
+              </span>
+              <span class="category-card__title">Spice Powders</span>
+            </a>
+          </li>
+          <li class="category-card-wrap">
+            <a class="category-card" href="products.html">
+              <span class="category-card__media">
+                <img src="assets/images/category-4.jpg" alt="Tea Powders" loading="lazy">
+              </span>
+              <span class="category-card__title">Tea Powders</span>
+            </a>
+          </li>
+          <li class="category-card-wrap">
+            <a class="category-card" href="products.html">
+              <span class="category-card__media">
+                <img src="assets/images/category-5.webp" alt="Ready Mixes" loading="lazy">
+              </span>
+              <span class="category-card__title">Ready Mixes</span>
+            </a>
+          </li>
+          <li class="category-card-wrap">
+            <a class="category-card" href="products.html">
+              <span class="category-card__media">
+                <img src="assets/images/category-2.jpg" alt="Ghee" loading="lazy">
+              </span>
+              <span class="category-card__title">Ghee</span>
+            </a>
+          </li>
+          <li class="category-card-wrap">
+            <a class="category-card" href="products.html">
+              <span class="category-card__media">
+                <img src="assets/images/category-3.jpg" alt="Organic Products" loading="lazy">
+              </span>
+              <span class="category-card__title">Organic Products</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== FEATURED PRODUCTS ============================== -->
+    <section class="section section--surface" id="featured-products" aria-labelledby="featured-heading">
+      <div class="container-xl">
+        <div class="text-center mx-auto mb-5" style="max-width: 38rem;">
+          <h2 class="section-heading" id="featured-heading">Customer Favourites</h2>
+          <p class="section-lede mx-auto">The tins our regulars reorder most — a good place to start if you're new to elsa.</p>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-2 row-cols-xl-4 g-4">
+
+          <div class="col">
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="media-placeholder" data-asset="Product photo, Elsa Sambar Curry Powder 200g tin on neutral backdrop, 1200×1200" aria-hidden="true">Sambar Curry Powder</span>
+              </div>
+              <h3 class="product-card__name">Sambar Curry Powder</h3>
+              <p class="product-card__weight">200 g tin</p>
+              <p class="product-card__price">₹165</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn btn-accent btn-add" data-product="Sambar Curry Powder">
+                  <span class="btn-add__label">Add to Cart</span>
+                </button>
+                <button type="button" class="btn btn-quiet" data-quick-view
+                  data-name="Sambar Curry Powder" data-weight="200 g tin" data-price="₹165"
+                  data-desc="A balanced, slow-roasted blend for everyday sambar — coriander-forward with a gentle chilli warmth, ground in small batches and sealed for freshness."
+                  aria-label="Quick view: Sambar Curry Powder">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="media-placeholder" data-asset="Product photo, Elsa Kashmiri Chilli Powder 100g pouch on neutral backdrop, 1200×1200" aria-hidden="true">Kashmiri Chilli Powder</span>
+              </div>
+              <h3 class="product-card__name">Kashmiri Chilli Powder</h3>
+              <p class="product-card__weight">100 g pouch</p>
+              <p class="product-card__price">₹95</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn btn-accent btn-add" data-product="Kashmiri Chilli Powder">
+                  <span class="btn-add__label">Add to Cart</span>
+                </button>
+                <button type="button" class="btn btn-quiet" data-quick-view
+                  data-name="Kashmiri Chilli Powder" data-weight="100 g pouch" data-price="₹95"
+                  data-desc="Prized for colour over heat — stone-ground from sun-dried Kashmiri chillies for the deep red base every good curry starts with."
+                  aria-label="Quick view: Kashmiri Chilli Powder">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="media-placeholder" data-asset="Product photo, Elsa Nilgiri Tea Powder 250g pack on neutral backdrop, 1200×1200" aria-hidden="true">Nilgiri Tea Powder</span>
+              </div>
+              <h3 class="product-card__name">Nilgiri Tea Powder</h3>
+              <p class="product-card__weight">250 g pack</p>
+              <p class="product-card__price">₹210</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn btn-accent btn-add" data-product="Nilgiri Tea Powder">
+                  <span class="btn-add__label">Add to Cart</span>
+                </button>
+                <button type="button" class="btn btn-quiet" data-quick-view
+                  data-name="Nilgiri Tea Powder" data-weight="250 g pack" data-price="₹210"
+                  data-desc="A brisk, full-bodied CTC blend from the Nilgiri hills — the everyday cup, brews strong enough for a generous splash of milk."
+                  aria-label="Quick view: Nilgiri Tea Powder">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="media-placeholder" data-asset="Product photo, Elsa Pure Cow Ghee 500ml jar on neutral backdrop, 1200×1200" aria-hidden="true">Pure Cow Ghee</span>
+              </div>
+              <h3 class="product-card__name">Pure Cow Ghee</h3>
+              <p class="product-card__weight">500 ml jar</p>
+              <p class="product-card__price">₹540</p>
+              <div class="product-card__actions">
+                <button type="button" class="btn btn-accent btn-add" data-product="Pure Cow Ghee">
+                  <span class="btn-add__label">Add to Cart</span>
+                </button>
+                <button type="button" class="btn btn-quiet" data-quick-view
+                  data-name="Pure Cow Ghee" data-weight="500 ml jar" data-price="₹540"
+                  data-desc="Slow-simmered the traditional way from Kerala cow's milk — the deep aroma that finishes a pot of dal or a festival sweet properly."
+                  aria-label="Quick view: Pure Cow Ghee">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <a class="btn btn-ghost btn-lg" href="products.html">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT US ============================== -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container-xl">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-5">
+            <div class="about-media">
+              <img src="assets/images/category-4.jpg" alt="Heaven Valley Industries — Kerala spice heritage" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <h2 class="section-heading">Heaven Valley Industries</h2>
+            <p>Founded by <strong>Shri. Varghese Muttom</strong> and <strong>Smt. Elsa Varghese</strong>, Heaven Valley Industries is an ISO-certified maker of organic spices and blended spice powders — sourced in Kerala, made without preservatives or artificial colours, and trusted by households for over three decades.</p>
+            <p>Every batch passes through our flavour-lock process and is sealed at peak freshness, so the tin that reaches your kitchen tastes the way it did the day it was ground — whether you're cooking three streets away or three countries away.</p>
+
+            <div class="row row-cols-2 row-cols-lg-4 g-3 my-4">
+              <div class="col">
+                <div class="stat-card">
+                  <span class="stat-card__value">31+ yrs</span>
+                  <span class="stat-card__label">of trusted service</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="stat-card">
+                  <span class="stat-card__value">100%</span>
+                  <span class="stat-card__label">organic, no preservatives</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="stat-card">
+                  <span class="stat-card__value">Award</span>
+                  <span class="stat-card__label">recognised for quality</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="stat-card">
+                  <span class="stat-card__value">Global</span>
+                  <span class="stat-card__label">customers across countries</span>
+                </div>
+              </div>
+            </div>
+
+            <a class="btn btn-ghost" href="about.html">Read More About Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TRUST & QUALITY ============================== -->
+    <section class="section section--surface" aria-labelledby="trust-heading">
+      <div class="container-xl">
+        <div class="text-center mx-auto mb-4" style="max-width: 38rem;">
+          <h2 class="section-heading" id="trust-heading">Why Shoppers Trust Elsa</h2>
+          <p class="section-lede mx-auto">The same standards we've held to for thirty-one years — stated plainly, not just promised.</p>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 g-2">
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </span>
+              <p class="trust-item__label mb-0">ISO Certified</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path><path d="M9 12c0-2 1.5-3 3-3s3 1 3 3-1.5 3-3 3-3 2-3 4"></path></svg>
+              </span>
+              <p class="trust-item__label mb-0">Organic Products</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="6.5" y1="6.5" x2="17.5" y2="17.5"></line></svg>
+              </span>
+              <p class="trust-item__label mb-0">Chemical-Free</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+              </span>
+              <p class="trust-item__label mb-0">Premium Kerala Sourcing</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="9" rx="1.5"></rect><path d="M7 11V8a5 5 0 0 1 10 0v3"></path></svg>
+              </span>
+              <p class="trust-item__label mb-0">Hygienic Manufacturing</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-item">
+              <span class="trust-item__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>
+              </span>
+              <p class="trust-item__label mb-0">Freshness Guaranteed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TESTIMONIALS ============================== -->
+    <section class="section" aria-labelledby="testimonials-heading">
+      <div class="container-xl">
+        <h2 class="section-heading text-center mb-5" id="testimonials-heading">What Our Customers Say</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                  <figure class="testimonial-card mb-0">
+                    <div class="testimonial-card__stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+                    <blockquote class="testimonial-card__quote">"The sambar powder tastes exactly like the one my mother used to grind at home in Thrissur. I've tried other brands since moving abroad — none of them came close."</blockquote>
+                    <figcaption class="testimonial-card__person">
+                      <span class="avatar" aria-hidden="true">AR</span>
+                      <span>
+                        <span class="testimonial-card__name">Anita R.</span>
+                        <span class="testimonial-card__place">Toronto, Canada</span>
+                      </span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="carousel-item">
+                  <figure class="testimonial-card mb-0">
+                    <div class="testimonial-card__stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+                    <blockquote class="testimonial-card__quote">"My mother is 78 and orders her own spice tins now because the website is so easy to use — big buttons, clear prices, nothing confusing. That alone earned my trust in the brand."</blockquote>
+                    <figcaption class="testimonial-card__person">
+                      <span class="avatar" aria-hidden="true">SM</span>
+                      <span>
+                        <span class="testimonial-card__name">Suresh M.</span>
+                        <span class="testimonial-card__place">Kochi, Kerala</span>
+                      </span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="carousel-item">
+                  <figure class="testimonial-card mb-0">
+                    <div class="testimonial-card__stars" role="img" aria-label="Rated 4 out of 5 stars">★★★★<span aria-hidden="true">☆</span></div>
+                    <blockquote class="testimonial-card__quote">"The ghee has a depth of flavour that the supermarket brands just don't have, and you can genuinely smell that it's the real thing the moment you open the jar."</blockquote>
+                    <figcaption class="testimonial-card__person">
+                      <span class="avatar" aria-hidden="true">PJ</span>
+                      <span>
+                        <span class="testimonial-card__name">Priya J.</span>
+                        <span class="testimonial-card__place">Bengaluru, India</span>
+                      </span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+              </div>
+
+              <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+                <button class="icon-btn testimonial-control" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  <span class="visually-hidden">Previous testimonial</span>
+                </button>
+                <div class="carousel-indicators position-static m-0">
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonial 1"></button>
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Testimonial 2"></button>
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Testimonial 3"></button>
+                </div>
+                <button class="icon-btn testimonial-control" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <span class="visually-hidden">Next testimonial</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container-xl py-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+        <div class="col">
+          <span class="footer-brand">
+            <img class="brand__logo" src="assets/images/elsa.png" alt="elsa — Heaven Valley Industries" width="168" height="48">
+          </span>
+          <p class="mb-0" style="max-width: 32ch;">Traditional spices, curry powders, tea and pantry essentials from Heaven Valley Industries — made the honest way since our founding, over thirty-one years ago.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Follow elsa on Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Follow elsa on Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Subscribe to elsa on YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.7 12 3.7 12 3.7s-6.6 0-8.4.6A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.6 8.4.6 8.4.6s6.6 0 8.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"></path><polygon points="9.8 15.5 15.8 12 9.8 8.5 9.8 15.5"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <h2 class="footer-heading h6">Main Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h2 class="footer-heading h6">Product Categories</h2>
+          <ul class="footer-links">
+            <li><a href="products.html">Curry Powders</a></li>
+            <li><a href="products.html">Spice Powders</a></li>
+            <li><a href="products.html">Tea Powders</a></li>
+            <li><a href="products.html">Ready Mixes</a></li>
+            <li><a href="products.html">Ghee</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h2 class="footer-heading h6">Contact</h2>
+          <ul class="footer-links">
+            <li>Heaven Valley Industries<br>Humpamon, Pathanamthitta<br>Kerala 689502, India</li>
+            <li><a href="tel:09539195111">09539195111</a></li>
+            <li><a href="mailto:heavenvalley14@gmail.com">heavenvalley14@gmail.com</a></li>
+            <li>Mon–Sat, 9 AM – 6 PM IST</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+        <span>© <span id="footerYear"></span> Heaven Valley Industries. All rights reserved.</span>
+        <span>ISO-Certified · Organic · Kerala-Sourced</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick view dialog -->
+  <dialog class="quick-view" id="quickViewDialog" aria-labelledby="quickViewTitle">
+    <button type="button" class="icon-btn quick-view__close" id="quickViewClose" aria-label="Close quick view">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="quick-view__body">
+      <div class="quick-view__media">
+        <span class="media-placeholder" id="quickViewMedia" aria-hidden="true"></span>
+      </div>
+      <div>
+        <h2 class="h4 mb-1" id="quickViewTitle"></h2>
+        <p class="product-card__weight" id="quickViewWeight"></p>
+        <p class="product-card__price" id="quickViewPrice"></p>
+        <p id="quickViewDesc"></p>
+        <button type="button" class="btn btn-accent btn-add" id="quickViewAdd">
+          <span class="btn-add__label">Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

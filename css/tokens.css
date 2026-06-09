@@ -1,0 +1,76 @@
+/*
+  Design tokens for elsa — resolved from DESIGN.md's seed palette.
+  "[to be resolved during implementation]" placeholders are settled here:
+  Spice-Red Accent anchored on dried red chili / paprika; Warm Paper, Ink,
+  Surface and Border are tinted toward the same hue at low chroma so the
+  whole neutral ramp reads as one family rather than generic gray-on-cream.
+*/
+
+:root {
+  /* Primary — The Ten-Percent Rule: reserved for primary actions, price, status */
+  --color-accent: oklch(56% 0.17 35);
+  --color-accent-deep: oklch(47% 0.17 33);
+  --color-accent-soft: oklch(91% 0.04 40);
+
+  /* Neutral ramp — all tinted toward the accent's hue (~35) at low chroma */
+  --color-warm-paper: oklch(97% 0.013 70);
+  --color-surface: oklch(94% 0.016 68);
+  --color-border: oklch(86% 0.018 60);
+  --color-ink: oklch(26% 0.02 50);
+  --color-ink-soft: oklch(43% 0.025 50);
+
+  /* Feedback tones — distinct from the accent so errors never read as "price" */
+  --color-success: oklch(54% 0.13 150);
+  --color-warning: oklch(58% 0.15 75);
+
+  /* Typography — The Heritage Pairing: a warm display serif for headings
+     (carries the "crafted, trusted for generations" feeling) contrasted
+     with a clean humanist sans for every reading task — body, labels, prices */
+  --font-display: "Fraunces", "Source Serif 4", Georgia, serif;
+  --font-sans: "Source Sans 3", "Public Sans", system-ui, -apple-system, sans-serif;
+
+  --text-display: clamp(1.875rem, 1.4rem + 2vw, 2.75rem);
+  --text-headline: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-title: 1.125rem;
+  --text-body: 1.0625rem;
+  --text-label: 0.9375rem;
+  --text-small: 0.875rem;
+
+  --leading-tight: 1.15;
+  --leading-body: 1.6;
+
+  /* Spacing scale — varied deliberately section to section, not uniform */
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Shape — gently rounded, never pill or sharp-square */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Elevation — The Flat-Counter Rule: shadows only for genuinely floating elements */
+  --shadow-floating: 0 8px 32px oklch(26% 0.02 50 / 0.16);
+
+  /* Motion — responsive only; exponential ease-out, no bounce */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration-fast: 160ms;
+  --duration-base: 240ms;
+  --duration-slow: 420ms;
+
+  /* Focus ring — generous and unmissable, per DESIGN.md Inputs spec */
+  --focus-ring: 0 0 0 3px var(--color-warm-paper), 0 0 0 6px var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 1ms;
+    --duration-base: 1ms;
+    --duration-slow: 1ms;
+  }
+}
