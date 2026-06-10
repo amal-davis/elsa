@@ -41,7 +41,9 @@
       "PowerShell(\\(Get-Content \"C:\\\\Users\\\\akhil\\\\Documents\\\\softverses files\\\\elsa\\\\css\\\\styles.css\" | Measure-Object -Line\\).Lines)",
       "PowerShell(Get-Content \"C:\\\\Users\\\\akhil\\\\Documents\\\\softverses files\\\\elsa\\\\css\\\\styles.css\" | Select-Object -Last 20 | ForEach-Object { Write-Output $_ })",
       "PowerShell($lines = \\(Get-Content \"C:\\\\Users\\\\akhil\\\\Documents\\\\softverses files\\\\elsa\\\\css\\\\styles.css\" | Measure-Object -Line\\).Lines; Write-Host \"Total lines: $lines\")",
-      "PowerShell($lines = \\(Get-Content \"C:\\\\Users\\\\akhil\\\\Documents\\\\softverses files\\\\elsa\\\\css\\\\styles.css\" | Measure-Object -Line\\).Lines; Write-Host \"styles.css lines: $lines\")"
+      "PowerShell($lines = \\(Get-Content \"C:\\\\Users\\\\akhil\\\\Documents\\\\softverses files\\\\elsa\\\\css\\\\styles.css\" | Measure-Object -Line\\).Lines; Write-Host \"styles.css lines: $lines\")",
+      "Bash(perl -v)",
+      "Bash(perl -i -CSD -pe 's{<h3 class=\"product-card__name\">\\([^<]+\\)</h3>}{<h3 class=\"product-card__name\"><a href=\"product-detail.html\" class=\"stretched-link text-reset text-decoration-none\">$1</a></h3>}g' index.html products.html product-detail.html cart.html)"
     ]
   }
 }
