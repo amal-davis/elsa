@@ -127,7 +127,7 @@
   var appliedCoupon      = null;
 
   var COUPONS = {
-    ELSA10:   { type: "percent",  value: 10 },
+    ELSAR10:   { type: "percent",  value: 10 },
     FLAT50:   { type: "fixed",    value: 50 },
     FREESHIP: { type: "shipping"            }
   };
@@ -200,7 +200,7 @@
         if (couponTagEl)    couponTagEl.textContent      = code;
         updateTotals();
       } else {
-        setCouponMsg("Invalid code. Try ELSA10 or FLAT50.", "error");
+        setCouponMsg("Invalid code. Try ELSAR10 or FLAT50.", "error");
       }
     });
 
@@ -267,7 +267,7 @@
         setTimeout(function () {
           window.alert(
             "✓ Order placed successfully!\n\n" +
-            "Thank you for shopping with Elsa.\n" +
+            "Thank you for shopping with Elsar.\n" +
             "You will receive a confirmation email shortly.\n\n" +
             "(Connect a real payment gateway / order API in production.)"
           );

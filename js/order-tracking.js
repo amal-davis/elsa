@@ -21,7 +21,7 @@
       shippedDate: "16 Jul 2026",
       subtotal: 599,
       discount: 60,
-      coupon: "ELSA10",
+      coupon: "ELSAR10",
       shipping: 0,
       total: 539,
       address: {
@@ -33,9 +33,9 @@
         phone: "09539195111"
       },
       items: [
-        { name: "Elsa Chicken Curry Masala", variant: "250 g", qty: 2, price: 150, img: "assets/images/products1.jpeg" },
-        { name: "Elsa Garam Masala",         variant: "100 g", qty: 1, price:  89, img: "assets/images/products2.jpg"  },
-        { name: "Elsa Premium Tea Powder",   variant: "500 g", qty: 1, price: 210, img: "assets/images/products3.jpg"  }
+        { name: "Elsar Chicken Curry Masala", variant: "250 g", qty: 2, price: 150, img: "assets/images/products1.jpeg" },
+        { name: "Elsar Garam Masala",         variant: "100 g", qty: 1, price:  89, img: "assets/images/products2.jpg"  },
+        { name: "Elsar Premium Tea Powder",   variant: "500 g", qty: 1, price: 210, img: "assets/images/products3.jpg"  }
       ],
       timeline: [
         { title: "Package Shipped via DTDC",  desc: "Tracking number DTDC12345678 generated. Package handed to courier.", time: "16 Jul 2026, 9:45 AM",  iso: "2026-07-16T09:45", done: true },
@@ -82,11 +82,11 @@
         phone: "09539195111"
       },
       items: [
-        { name: "Elsa Garam Masala",       variant: "100 g", qty: 1, price:  89, img: "assets/images/products2.jpg"  },
-        { name: "Elsa Black Pepper Powder", variant: "200 g", qty: 1, price: 200, img: "assets/images/products4.jpeg" }
+        { name: "Elsar Garam Masala",       variant: "100 g", qty: 1, price:  89, img: "assets/images/products2.jpg"  },
+        { name: "Elsar Black Pepper Powder", variant: "200 g", qty: 1, price: 200, img: "assets/images/products4.jpeg" }
       ],
       timeline: [
-        { title: "Order Delivered",       desc: "Package delivered successfully. Thank you for shopping with Elsa!", time: "3 Jul 2026, 2:10 PM",   iso: "2026-07-03T14:10", done: true },
+        { title: "Order Delivered",       desc: "Package delivered successfully. Thank you for shopping with Elsar!", time: "3 Jul 2026, 2:10 PM",   iso: "2026-07-03T14:10", done: true },
         { title: "Out for Delivery",      desc: "Your order is out for delivery. Expect it by end of day.",         time: "3 Jul 2026, 8:30 AM",   iso: "2026-07-03T08:30", done: true },
         { title: "Package Shipped",       desc: "Package shipped via BlueDart. Tracking: BD987654321.",             time: "30 Jun 2026, 10:20 AM", iso: "2026-06-30T10:20", done: true },
         { title: "Order Confirmed",       desc: "Order confirmed and moved to warehouse for packing.",              time: "28 Jun 2026, 3:00 PM",  iso: "2026-06-28T15:00", done: true },
@@ -130,7 +130,7 @@
         phone: "09539195111"
       },
       items: [
-        { name: "Elsa Premium Tea Powder", variant: "500 g", qty: 2, price: 225, img: "assets/images/products3.jpg" }
+        { name: "Elsar Premium Tea Powder", variant: "500 g", qty: 2, price: 225, img: "assets/images/products3.jpg" }
       ],
       timeline: [
         { title: "Order Under Processing", desc: "Your order is being prepared by our warehouse team.",           time: "10 Jul 2026, 5:00 PM",  iso: "2026-07-10T17:00", done: true },

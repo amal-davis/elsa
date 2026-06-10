@@ -1,5 +1,5 @@
-# Elsa Homepage Specification
-**Heaven Valley Industries — Elsa Curry Powder**
+# Elsar Homepage Specification
+**Heaven Valley Industries — Elsar Curry Powder**
 Production-ready, dev-handoff spec for a Bootstrap 5 + Django build.
 
 This spec applies [[PRODUCT.md]] (register: product, audience: older/less tech-savvy home cooks restocking pantry staples, principle: "fast restocking, not discovery shopping") and [[DESIGN.md]] (North Star: "The Trusted Pantry Counter" — restrained earthy palette, Spice-Red Accent at ≤10% of any surface, single humanist sans, flat-by-default surfaces, responsive-only motion). Every decision below traces back to one of those two documents; where this spec adds detail, it stays inside their rules.
@@ -153,7 +153,7 @@ HomePage
 │       └── ReadMoreButton (links to full About Us page)
 │
 ├── TrustQualitySection
-│   ├── SectionHeading ("Why Shoppers Trust Elsa")
+│   ├── SectionHeading ("Why Shoppers Trust Elsar")
 │   └── TrustBadge × 6 (icon + short label, no card chrome — see §6)
 │
 ├── TestimonialsCarousel
@@ -281,7 +281,7 @@ Stat cards (four, each: a number/label pair, plain and unembellished — no anim
 CTA: **"Read More About Us →"**
 
 ### 6. Trust & Quality
-Heading: **"Why Shoppers Trust Elsa"**
+Heading: **"Why Shoppers Trust Elsar"**
 Six items, icon + short label (label does the explaining — icon reinforces, never substitutes):
 - **ISO Certified**
 - **Organic Products**
@@ -295,7 +295,7 @@ Heading: **"What Our Customers Say"**
 Per card: customer photo (real, with consent — never stock-photo generic), name + general location (e.g. "Anita R., Kochi"), star rating (visual stars *plus* a text equivalent like "5 out of 5" for screen readers and for users who can't distinguish the icon at a glance), and a short, specific quote — favor concrete detail ("the curry powder tastes like my mother's") over generic praise ("great product!").
 
 ### 8. Footer
-- **Column 1 (Brand):** Logo, one-line description (e.g. *"Traditional spices and food essentials, made the honest way since [founding year]."*), social icons (each with a real accessible label: "Follow Elsa on Instagram", not "Social link 1")
+- **Column 1 (Brand):** Logo, one-line description (e.g. *"Traditional spices and food essentials, made the honest way since [founding year]."*), social icons (each with a real accessible label: "Follow Elsar on Instagram", not "Social link 1")
 - **Column 2 (Main Links):** Home · Products · About Us · Contact Us
 - **Column 3 (Categories):** Curry Powders · Spice Powders · Tea Powders · Ready Mixes · Ghee
 - **Column 4 (Contact):** Address · Phone (tel: link) · Email (mailto: link) · Business Hours (plain-language, e.g. "Mon–Sat, 9 AM – 6 PM IST")
@@ -372,7 +372,7 @@ Base container: `.container-xl` for all sections except the Hero and Trust & Qua
 <!-- Trust & Quality -->
 <section class="py-5 bg-warm-paper">
   <div class="container-xl">
-    <h2 class="text-center mb-4">Why Shoppers Trust Elsa</h2>
+    <h2 class="text-center mb-4">Why Shoppers Trust Elsar</h2>
     <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 g-4 text-center"> <!-- 6 × badge --> </div>
   </div>
 </section>

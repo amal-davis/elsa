@@ -1,4 +1,4 @@
-// elsa homepage interactions — responsive motion only, every control reachable
+// elsar homepage interactions — responsive motion only, every control reachable
 // by keyboard, every animated piece respects prefers-reduced-motion.
 (function () {
   "use strict";
@@ -867,7 +867,7 @@
   document.querySelectorAll(".product-card__media").forEach(function (media, idx) {
     if (media.querySelector(".product-card__img")) return; /* skip if already present */
     var placeholder = media.querySelector(".media-placeholder");
-    var altText = placeholder ? placeholder.textContent.trim() : "Elsa product";
+    var altText = placeholder ? placeholder.textContent.trim() : "Elsar product";
     var src = PRODUCT_IMGS[idx % PRODUCT_IMGS.length];
     media.insertBefore(makeProductImg(src, altText, "product-card__img"), media.firstChild);
   });
@@ -876,7 +876,7 @@
   document.querySelectorAll(".cart-item__img").forEach(function (wrap, idx) {
     if (wrap.querySelector(".cart-item__img-photo")) return;
     var placeholder = wrap.querySelector(".cart-item__media");
-    var altText = placeholder ? placeholder.textContent.trim() : "Elsa product";
+    var altText = placeholder ? placeholder.textContent.trim() : "Elsar product";
     var src = PRODUCT_IMGS[idx % PRODUCT_IMGS.length];
     wrap.insertBefore(makeProductImg(src, altText, "cart-item__img-photo"), wrap.firstChild);
   });
@@ -885,7 +885,7 @@
   document.querySelectorAll(".chk-order-item__img-wrap").forEach(function (wrap, idx) {
     if (wrap.querySelector(".chk-order-item__img-photo")) return;
     var placeholder = wrap.querySelector(".chk-order-item__media");
-    var altText = placeholder ? placeholder.textContent.trim() : "Elsa product";
+    var altText = placeholder ? placeholder.textContent.trim() : "Elsar product";
     var src = PRODUCT_IMGS[idx % PRODUCT_IMGS.length];
     var img = makeProductImg(src, altText, "chk-order-item__img-photo");
     /* Insert before the badge span so the badge stays on top */

@@ -1,4 +1,4 @@
-﻿/* elsa — homepage styles. Bootstrap 5 provides layout/grid; this layer applies
+﻿/* elsar — homepage styles. Bootstrap 5 provides layout/grid; this layer applies
    the brand system on top (The Trusted Pantry Counter — calm, earthy, flat). */
 
 * {
@@ -4283,7 +4283,7 @@ input:focus-visible,
 }
 
 /* ======================================================================
-   FEATURE CARDS  (Why Choose Elsa)
+   FEATURE CARDS  (Why Choose Elsar)
    ====================================================================== */
 .abt-feature-card {
   background: var(--color-surface);

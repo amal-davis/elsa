@@ -1,19 +1,19 @@
 <!-- SEED: re-run /impeccable document once there's code to capture the actual tokens and components. -->
 
 ---
-name: elsa
+name: elsar
 description: A clean, credible storefront for restocking traditional spices, masalas, tea, mixes, and ghee.
 ---
 
-# Design System: elsa
+# Design System: elsar
 
 ## 1. Overview
 
 **Creative North Star: "The Trusted Pantry Counter"**
 
-elsa should feel like the shop counter you already trust: the one where you walk in, point at the tin you always buy, and walk out in under a minute. The system is restrained and earthy — tinted neutrals doing the heavy lifting, one warm spice-anchored accent appearing only where it earns its place (primary actions, key product cues). Calm replaces persuasion; clarity replaces decoration. Raidco Foods' clean, institutional storefront is the closest fit: minimal visual noise, product information stated plainly, trust built through legibility rather than promotional pressure.
+elsar should feel like the shop counter you already trust: the one where you walk in, point at the tin you always buy, and walk out in under a minute. The system is restrained and earthy — tinted neutrals doing the heavy lifting, one warm spice-anchored accent appearing only where it earns its place (primary actions, key product cues). Calm replaces persuasion; clarity replaces decoration. Raidco Foods' clean, institutional storefront is the closest fit: minimal visual noise, product information stated plainly, trust built through legibility rather than promotional pressure.
 
-The system explicitly rejects the **generic Shopify-template look** — the interchangeable grid-of-cards storefront that could be selling sneakers, soap, or spices with no change to the shell. Every surface in elsa should read unmistakably as a food storefront: weights in grams/kg, ingredient and freshness cues, product photography that does the talking, never a templated stand-in.
+The system explicitly rejects the **generic Shopify-template look** — the interchangeable grid-of-cards storefront that could be selling sneakers, soap, or spices with no change to the shell. Every surface in elsar should read unmistakably as a food storefront: weights in grams/kg, ingredient and freshness cues, product photography that does the talking, never a templated stand-in.
 
 **Key Characteristics:**
 - Earthy, restrained palette: tinted warm neutrals with a single spice-toned accent at ≤10% of any surface
@@ -40,7 +40,7 @@ The system explicitly rejects the **generic Shopify-template look** — the inte
 
 ## 3. Typography
 
-**Display Font:** `Fraunces` (warm display serif, semibold) — section titles, hero headlines, the "elsa" wordmark.
+**Display Font:** `Fraunces` (warm display serif, semibold) — section titles, hero headlines, the "elsar" wordmark.
 **Body Font:** `Source Sans 3` (humanist sans) — body copy, labels, navigation, prices, every reading task.
 **Label/Mono Font:** Not used. Prices and quantities render in Source Sans 3 at a heavier weight; no monospace digit treatment needed for this surface.
 
@@ -54,11 +54,11 @@ The system explicitly rejects the **generic Shopify-template look** — the inte
 - **Label** (medium, `~0.875rem`, slightly open letter-spacing, sentence case — never tracked-out all-caps body): Form field labels, filter chips, status tags.
 
 ### Named Rules (optional)
-**The Heritage Pairing Rule.** elsa uses exactly two type families, split cleanly by job: Fraunces for anything that announces (headlines, section titles, the wordmark), Source Sans 3 for anything that's read at length (body, labels, prices, navigation). Never both on the same element, never a third family introduced.
+**The Heritage Pairing Rule.** elsar uses exactly two type families, split cleanly by job: Fraunces for anything that announces (headlines, section titles, the wordmark), Source Sans 3 for anything that's read at length (body, labels, prices, navigation). Never both on the same element, never a third family introduced.
 
 ## 4. Elevation
 
-elsa is flat by default. Depth is conveyed through tonal layering — Surface sits one step deeper than Warm Paper — not through drop shadows. Shadows, where they appear at all, are reserved for genuinely floating elements (modals, toasts, dropdown menus) and stay soft and close to the surface; they signal "this is temporarily above the page," not "this card is fancy."
+elsar is flat by default. Depth is conveyed through tonal layering — Surface sits one step deeper than Warm Paper — not through drop shadows. Shadows, where they appear at all, are reserved for genuinely floating elements (modals, toasts, dropdown menus) and stay soft and close to the surface; they signal "this is temporarily above the page," not "this card is fancy."
 
 ### Shadow Vocabulary (if applicable)
 - **Floating** (`box-shadow: 0 8px 24px rgba(20, 14, 10, 0.12)`): Modals, popovers, toasts, and dropdown menus — anything genuinely overlaying the page. Never applied to standard cards or product tiles.
@@ -68,7 +68,7 @@ elsa is flat by default. Depth is conveyed through tonal layering — Surface si
 
 ## 5. Components
 
-No components exist yet — elsa is pre-implementation. The canonical primitives below are best-practice defaults consistent with the rules above; they should be replaced with real extracted tokens on the next `/impeccable document` pass once there's code.
+No components exist yet — elsar is pre-implementation. The canonical primitives below are best-practice defaults consistent with the rules above; they should be replaced with real extracted tokens on the next `/impeccable document` pass once there's code.
 
 ### Buttons
 - **Shape:** Gently rounded corners (`[radius to be chosen — likely 6–8px]`), never pill-shaped or sharp-square; reads approachable without looking playful.
@@ -104,7 +104,7 @@ No components exist yet — elsa is pre-implementation. The canonical primitives
 
 ### Don't:
 - **Don't** build a generic Shopify-template storefront — a grid-of-cards shell that could sell anything. Every screen should read unmistakably as a food storefront (units, ingredients, photography), per PRODUCT.md's anti-reference.
-- **Don't** add aggressive promotional banners, countdown timers, or discount popups — the DoubleHorse pattern PRODUCT.md explicitly rejects. elsa earns trust through clarity, not urgency.
+- **Don't** add aggressive promotional banners, countdown timers, or discount popups — the DoubleHorse pattern PRODUCT.md explicitly rejects. elsar earns trust through clarity, not urgency.
 - **Don't** layer heritage storytelling, recipe hubs, or cultural narrative blocks over the buy path — reserve that content (if it exists at all) for clearly secondary surfaces that never compete with checkout.
 - **Don't** use light-gray body text on warm-tinted backgrounds. If the contrast is even close, push Ink darker — this audience cannot afford to squint.
 - **Don't** add drop shadows to standard cards or product tiles. Depth comes from tonal layering (The Flat-Counter Rule); shadows are reserved for genuinely floating elements only.

@@ -1,5 +1,5 @@
-# Elsa Product Listing Page (PLP) Specification
-**Heaven Valley Industries — Elsa Curry Powder**
+# Elsar Product Listing Page (PLP) Specification
+**Heaven Valley Industries — Elsar Curry Powder**
 Production-ready, dev-handoff spec for a Bootstrap 5 + Django build.
 
 This spec applies [[PRODUCT.md]] (register: product, audience: older/less tech-savvy home cooks restocking pantry staples, principle: "fast restocking, not discovery shopping — strong search, clear categories, minimal steps to checkout") and [[DESIGN.md]] (North Star: "The Trusted Pantry Counter" — restrained earthy palette, Spice-Red Accent at ≤10% of any surface, single humanist sans for reading + Fraunces for announcing per The Heritage Pairing Rule, flat-by-default surfaces, responsive-only motion). It also extends [[specs/homepage.md]], whose `SiteHeader` and `SiteFooter` are reused here verbatim — they are specified once and never redefined per page.
@@ -303,7 +303,7 @@ Per card: category label · product name · weight · price (₹) · 1–2 line 
 - **Previous** · page numbers **1 2 3 … 8** · **Next** (desktop/tablet); **Previous · "Page 2 of 8" · Next** (mobile)
 
 ### 7. Trust Band
-Heading: **"Why Shoppers Trust Elsa"** (reusing the homepage's exact heading and component for cross-page consistency)
+Heading: **"Why Shoppers Trust Elsar"** (reusing the homepage's exact heading and component for cross-page consistency)
 Six items — note these use the brief's wording, which differs slightly from the homepage's existing trust copy ("No Preservatives" vs. homepage's "Chemical-Free," "Hygienically Packed" vs. "Hygienic Manufacturing," "Kerala Sourced" vs. "Premium Kerala Sourcing"). **Recommendation: reconcile to one wording set site-wide before build** (see §11 Open Questions) — shipping two phrasings of the same six claims across two pages is a small but real consistency tell.
 - **ISO Certified**
 - **Organic Products**
@@ -375,7 +375,7 @@ Base container: `.container-xl` throughout — this page runs no full-bleed sect
 <!-- Trust band — identical markup pattern to specs/homepage.md §9's Trust & Quality section -->
 <section class="py-5 bg-warm-paper">
   <div class="container-xl">
-    <h2 class="text-center mb-4">Why Shoppers Trust Elsa</h2>
+    <h2 class="text-center mb-4">Why Shoppers Trust Elsar</h2>
     <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 g-4 text-center"> <!-- 6 × badge --> </div>
   </div>
 </section>

@@ -10,7 +10,7 @@ Everyday home cooks shopping online for traditional Indian food staples — masa
 
 ## Product Purpose
 
-elsa is an e-commerce storefront for traditional food products (spice blends, curry powders, tea, ready mixes, ghee). It exists to make restocking household food staples fast, clear, and trustworthy online. Success looks like a shopper finding their product, trusting what they're buying (clear weights, ingredients, sourcing), and checking out without confusion or hesitation — the commerce mechanics (search, cart, checkout, account, order tracking) are the primary surface, not editorial storytelling.
+elsar is an e-commerce storefront for traditional food products (spice blends, curry powders, tea, ready mixes, ghee). It exists to make restocking household food staples fast, clear, and trustworthy online. Success looks like a shopper finding their product, trusting what they're buying (clear weights, ingredients, sourcing), and checking out without confusion or hesitation — the commerce mechanics (search, cart, checkout, account, order tracking) are the primary surface, not editorial storytelling.
 
 ## Brand Personality
 

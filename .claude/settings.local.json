@@ -43,7 +43,10 @@
       "PowerShell($lines = \\(Get-Content \"C:\\\\Users\\\\akhil\\\\Documents\\\\softverses files\\\\elsa\\\\css\\\\styles.css\" | Measure-Object -Line\\).Lines; Write-Host \"Total lines: $lines\")",
       "PowerShell($lines = \\(Get-Content \"C:\\\\Users\\\\akhil\\\\Documents\\\\softverses files\\\\elsa\\\\css\\\\styles.css\" | Measure-Object -Line\\).Lines; Write-Host \"styles.css lines: $lines\")",
       "Bash(perl -v)",
-      "Bash(perl -i -CSD -pe 's{<h3 class=\"product-card__name\">\\([^<]+\\)</h3>}{<h3 class=\"product-card__name\"><a href=\"product-detail.html\" class=\"stretched-link text-reset text-decoration-none\">$1</a></h3>}g' index.html products.html product-detail.html cart.html)"
+      "Bash(perl -i -CSD -pe 's{<h3 class=\"product-card__name\">\\([^<]+\\)</h3>}{<h3 class=\"product-card__name\"><a href=\"product-detail.html\" class=\"stretched-link text-reset text-decoration-none\">$1</a></h3>}g' index.html products.html product-detail.html cart.html)",
+      "Bash(sort -t: -k2 -rn)",
+      "Bash(git mv *)",
+      "Bash(xargs -0 perl -i -CSD -pe 's/Elsa\\(?! Varghese\\)/Elsar/g; s/elsa/elsar/g; s/ELSA/ELSAR/g')"
     ]
   }
 }

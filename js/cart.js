@@ -5,7 +5,7 @@
   var SHIPPING_COST = 49;
 
   var COUPONS = {
-    ELSA10: { type: "percent", value: 10, label: "ELSA10" },
+    ELSAR10: { type: "percent", value: 10, label: "ELSAR10" },
     FLAT50: { type: "fixed", value: 50, label: "FLAT50" },
     FREESHIP: { type: "shipping", value: 0, label: "FREESHIP" }
   };
@@ -301,7 +301,7 @@
         showCouponRemove(code);
         updateSummary();
       } else {
-        setCouponMsg("Invalid coupon code. Try ELSA10 or FLAT50.", "error");
+        setCouponMsg("Invalid coupon code. Try ELSAR10 or FLAT50.", "error");
       }
     });
 
