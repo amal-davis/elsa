@@ -409,7 +409,7 @@ Notes:
 ### Phase 0 — Tokens & shell (foundation; nothing else can start cleanly without this)
 1. Translate DESIGN.md's token set into a Bootstrap 5 SCSS variable override file (`_variables.scss`): map `$primary` → Spice-Red Accent, `$body-bg`/`$light` → Warm Paper, `$body-color` → Ink, a new `$surface` → Surface, `$border-color` → Border/Divider. Resolve the placeholder hex values in DESIGN.md to real OKLCH-derived hex during this step (the seed marks them `[to be resolved during implementation]` — this is that implementation).
 2. Set the type scale: import the chosen humanist sans (DESIGN.md names the *direction*, not the family yet — pick one in the Inter/Public Sans/Source Sans family as noted, confirm license and self-host for performance and offline reliability), wire up the Display/Headline/Title/Body/Label scale as Bootstrap's `$font-size-*` and heading overrides.
-3. Build `base.html` (Django): blocks for `title`, `extra_css`, `content`, `extra_js`; includes `{% include "partials/_header.html" %}` and `{% include "partials/_footer.html" %}` so every future page inherits the reusable shell from day one.
+3. Build `base.html` (Django): blocks for `title`, `extra_css`, `content`, `extra_js`; includes `{% raw %}{% include "partials/_header.html" %}{% endraw %}` and `{% raw %}{% include "partials/_footer.html" %}{% endraw %}` so every future page inherits the reusable shell from day one.
 4. Build `partials/_header.html` and `partials/_footer.html` exactly per §2/§3-5 — these are the two components explicitly specified for reuse; get them right once, here, before any page-specific work begins.
 
 ### Phase 1 — Static structure (markup before behavior)
